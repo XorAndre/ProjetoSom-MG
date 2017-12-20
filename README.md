@@ -1,7 +1,8 @@
 # ProjetoSom-MG
-####Controle de atividades
+#### Controle de atividades
 
-####Guilherme Back-end
+#### Guilherme Back-end
+##### Detalhe o painel deve ter crud em todos
 <p>
   Banco de dados:<br>
   Galeria= Thumb + Fotos albuns<br>
