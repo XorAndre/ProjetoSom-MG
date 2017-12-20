@@ -3,6 +3,7 @@
 
 #### Guilherme Back-end
 ##### Detalhe o painel deve ter crud em todos
+
 <p>
   Banco de dados:<br>
   Galeria= Thumb + Fotos albuns<br>
@@ -12,6 +13,7 @@
   Agenda= imagem, data, titulo, descrição <br>
   Login= usuário, nome, senha, email, nível (editor, admnistrador), thumb
 </p>
+<hr>
 #### André Front-end
 <p>
 Painel<br>
