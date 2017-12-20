@@ -17,12 +17,11 @@
     </ul>
 </nav>
 <div class="images form large-9 medium-8 columns content">
-    <?= $this->Form->create($image) ?>
+    <?= $this->Form->create($image,['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Add Image') ?></legend>
         <?php
-            echo $this->Form->control('path');
-            echo $this->Form->control('name');
+            echo $this->Form->control('name',['type' => 'file']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

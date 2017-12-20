@@ -47,6 +47,45 @@ class ImagesTable extends Table
         $this->hasMany('Users', [
             'foreignKey' => 'image_id'
         ]);
+                $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'name' => 
+                [
+                    'path' => 'webroot{DS}files{DS}{model}{DS}{microtime}{time}',
+                    'fields' => [
+                        'dir' => 'path',
+                    ],
+                        'deleteCallback' => function ($path, $entity, $field, $settings) {
+                        return [
+                            $path . $entity->{$field},
+                            $path . 'thumbnail-' . $entity->{$field}
+                        ];
+                    },
+                    'transformer' =>  function ($table, $entity, $data, $field, $settings) {
+                        $extension = pathinfo($data['name'], PATHINFO_EXTENSION);
+
+                        // Store the thumbnail in a temporary file
+                        $tmp = tempnam(sys_get_temp_dir(), 'upload') . '.' . $extension;
+
+                        // Use the Imagine library to DO THE THING
+                        $size = new \Imagine\Image\Box(40, 40);
+                        $mode = \Imagine\Image\ImageInterface::THUMBNAIL_INSET;
+                        $imagine = new \Imagine\Gd\Imagine();
+
+                        // Save that modified file to our temp file
+                        $imagine->open($data['tmp_name'])
+                            ->thumbnail($size, $mode)
+                            ->save($tmp);
+
+                        // Now return the original *and* the thumbnail
+                        return [
+                            $data['tmp_name'] => $data['name'],
+                            $tmp => 'thumbnail-' . $data['name'],
+                        ];
+                    },
+                    'keepFilesOnDelete' => false
+                ]
+             ]
+        );
     }
 
     /**
@@ -57,22 +96,30 @@ class ImagesTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator->provider('upload', \Josegonzalez\Upload\Validation\ImageValidation::class);
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
+        $validator->add('name', 'validExtension', [
+                    'rule' => ['extension',['gif', 'jpeg', 'png', 'jpg']],
+                    'message' => __('These files extension are allowed: .png .jpeg .png .jpg')
+                ]);
+        $validator->add('name', 'fileAboveMinHeight', [
+        'rule' => ['isAboveMinHeight', 200],
+        'message' => 'This image should at least be 200px high',
+        'provider' => 'upload'
+    ]);
+        $validator->add('name', 'fileAboveMinWidth', [
+        'rule' => ['isAboveMinHeight', 200],
+        'message' => 'This image should at least be 200px high',
+        'provider' => 'upload'
+    ]);
 
-        $validator
-            ->scalar('path')
-            ->maxLength('path', 255)
-            ->requirePresence('path', 'create')
-            ->notEmpty('path');
-
-        $validator
-            ->scalar('name')
-            ->maxLength('name', 255)
-            ->requirePresence('name', 'create')
-            ->notEmpty('name');
-
+    $validator->add('file', 'fileBelowMaxSize', [
+        'rule' => ['isBelowMaxSize', 2048],
+        'message' => 'This file is too large',
+        'provider' => 'upload'
+    ]);
         return $validator;
     }
 }
