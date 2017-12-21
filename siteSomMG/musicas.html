@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<!--CSS-->
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<!--SEO-->
+		<title>SomMG | Campeonato Brasileiro de som Automotivo</title>
+		<meta name="description" content="Som-MG o melhor site de evento automotivo do Brasil">
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="Web Creative Design">
+	</head>
+	<body>
+		<section class="main">
+			<header class="topo">
+				
+			</header><!--/topo-->
+			<nav class="navbar navbar-inverse">
+			    <div class="container-fluid">
+			        <div class="navbar-header">
+			        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+			        <a class="navbar-brand" href="#"></a>
+			        </div>
+			        <div id="navbar" class="navbar-collapse collapse">
+			        <ul class="nav navbar-nav">
+			            <li class="active"><a href="index.php">HOME</a></li>
+			            <li><a href="#">ARENA SOM-MG</a></li>
+			            <li><a href="#">AGENDA</a></li>
+			            <li><a href="?pagina=galeria">COBERTURAS</a></li>
+			            <li><a href="#">MÚSICAS</a></li>
+			            <li><a href="#">VÍDEOS</a></li>
+			            <li><a href="#">MATÉRIAS</a></li>
+			            <li><a href="#">RANKING</a></li>
+			            <li><a href="#">CONTATO</a></li>
+			            <li><a href="?pagina=nossa-historia">CONHEÇA NOSSA HISTÓRIA</a></li>
+			        </ul>                   
+			        </div><!--/.nav-collapse -->
+			    </div><!--/.container-fluid -->
+			</nav><!--/Menu-->
+			<main>
+				<section class="container">
+					<article class="row">
+						<div class="col-md-6">
+							<h3>QUE TAL TOCAR OS SUCESSOS DE NOSSA PLAYLIST EM SEU CARRO OU EVENTO? PODE BAIXAR É GRÁTIS!</h3>
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<h3 class="panel-title">NOME DA GALERIA | DATA</h3>
+									<div class="pull-right">
+										<span class="clickable filter" data-toggle="tooltip" title="PESQUISAR" data-container="body">
+											<i class="ion-ios-search-strong"></i>
+										</span>
+									</div>
+								</div>
+								<div class="panel-body">
+									<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="PESQUISAR A MÚSICA" />
+								</div>
+								<table class="table table-hover" id="dev-table">
+									<thead>
+										<tr>											
+											<th>NOME</th>
+											<th>ARQUIVO</th>
+											<th>DOWNLOAD</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>											
+											<td>Kilgore</td>
+											<td>Trout</td>
+											<td>
+												<button class="btn btn-success">
+													DOWNLOAD
+												</button>
+											</td>
+										</tr>										
+									</tbody>
+								</table>
+							</div><!--/panel-musicas-->							
+						</div>
+						<div class="col-md-6">
+							<div class="span vermelho">
+								<h2>OUÇA A PLAYLIST SOM-MG</h2>
+							</div>
+							<div class="player" id="meuplayer">
+	
+							 <!-- Nome da música Atual -->
+							 <h3 class="player-current">Selecione uma música</h3>
+								
+							 <!-- Barra de progresso	 -->
+							 <div class="player-progress">
+							  <div class="player-progress-bar"></div>
+							 </div>
+							 <!-- 	Controles -->
+							 <div class="player-controls">
+							  <button class="player-btn player-prev">&#8739;&#9664;&#9664;</button>
+							  <button class="player-btn player-play">&#9654;</button>
+							  <button class="player-btn player-pause">&#8739; &#8739;</button>
+							  <button class="player-btn player-stop">&#9724;</button>
+							  <button class="player-btn player-next">&#9654;&#9654;&#8739;</button>
+								 <label>
+									 <span>Volume</span>
+								 	 <input type="range" min="0" max="100" step="0.1" class="player-volume-slider">
+								 </label><br>
+								 <label>
+									<input type="checkbox" value="0" class="player-repeat">
+									<span>Repetir</span>
+								</label>
+							 </div>
+							 <!-- Playlist	 -->
+							 <ul class="player-playlist">
+								 <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/Scatman%20(Ski%20Ba%20Bop%20Ba%20Dop%20Bop).mp3">Scatman - Scatman John</li>
+								 <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/Haddaway%20-%20What%20is%20love.mp3">What Is Love - Haddaway</li>
+								 <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/What's%20Up.mp3">What's Up - 4 Non Blondes</li>
+							  <li data-src="http://hcmaslov.d-real.sci-nnov.ru/public/mp3/Queen/Queen%20'I%20Want%20To%20Break%20Free'.mp3">I Want To Break Free - Queen</li>
+								 <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/Rockwell%20-%20Somebody's%20Watching%20Me.mp3">Somebody's Watch Me - Rockwell</li>
+							  <li data-src="http://hcmaslov.d-real.sci-nnov.ru/public/mp3/Beatles/05%20Help!/The%20Beatles%20-%20Help!%20-%2001%20Help!.mp3">Help! - The Beatles</li>
+							  <li data-src="http://hcmaslov.d-real.sci-nnov.ru/public/mp3/Nirvana/Nirvana%20'Smells%20Like%20Teen%20Spirit'.mp3">Smells Like Team Spirit - Nirvana</li>
+							  <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/A-Ha%20-%20Take%20On%20Me%20(Extended%20Version).mp3">Take On me - A-ha</li>
+							  <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/Cyndi%20Lauper%20-%20Girls%20Just%20Wanna%20Have%20Fun%20%5bMarch%201984%5d.mp3">Just Wanna Have Fun - Cyndi Lauper</li>
+								 <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/Earth%20Wind%20and%20Fire%20-%20September.mp3">September - Earth, Wind and Fire</li>
+								 <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/Eurythmics%20-%20Sweet%20Dreams%20%5bAugust%201983%5d.mp3">Sweet Dreams - Eurythmics</li>
+								 <li data-src="http://dora-robo.com/muzyka/70's-80's-90's%20/Europe%20-%20The%20Final%20Countdown.mp3">The Final Countdown - Europe</li>
+							 </ul>
+							</div><!--/Player-->
+						</div>
+					</article>
+				</section><!--/box-um-->
+				
+				<section class="container">
+					<article class="row">
+						<div class="col-md-12">
+							<div class="span vermelho col-md-4">
+								<h2>CURTA NOSSAS REDES SOCIAIS</h2>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSiteSommg%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						</div>
+						<div class="col-md-6">
+							<iframe src="//lightwidget.com/widgets/d50f34b13f1e5e8ea20e8545a5fce542.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+						</div>
+					</article>
+				</section>
+			</main>
+			<footer class="footer">
+				  <div class="container">
+				    <div class="row">
+				      <div class="col-md-4 col-sm-4 col-xs-12 footerleft ">
+				        <div class="logofooter">
+				        <img src="img/logo_sommg.png" alt="Logo-footer-SomMG" class="logo" title="Logo-SomMG">
+				        </div>
+				        <p><i class="fa fa-phone"></i>Telefone: (31) 88418027</p>
+				        <p><i class="fa fa-envelope"></i> E-mail : diretoria@sommg.com.br</p>
+				        
+				      </div>
+				      <div class="col-md-4 col-sm-4 col-xs-12 paddingtop-bottom">
+				        <h6 class="heading7">CATEGORIAS</h6>
+				        <ul class="footer-ul">
+				          <li><a href="#"> COBERTURAS</a></li>
+				          <li><a href="#"> MÚSICAS</a></li>
+				          <li><a href="#"> NOTÍCIAS</a></li>
+				          <li><a href="#"> RANKING</a></li>          
+				          <li><a href="#"> DÚVIDAS FREQUENTES</a></li>         
+				        </ul>
+				      </div>
+				      <div class="col-md-4 col-sm-4 col-xs-12 paddingtop-bottom">
+				        <h6 class="heading7">ÚLTIMAS POSTAGENS</h6>
+				        <div class="post">
+				          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>          
+				        </div>
+				      </div>      
+				    </div>
+				  </div>
+				</footer>
+				<!--footer start from here-->
+
+				<div class="copyright">
+				  <div class="container">
+				    <div class="col-md-6">
+				      <p>© <?= date('Y');?> - Todos direitos reservados | Desenvolvimento: <?= $dev;?></p>
+				    </div>
+				    <div class="col-md-6">
+				      <ul class="bottom_ul">        
+				        <li><a href="#">Sobre-nós</a></li>
+				        <li><a href="#">Blog</a></li>
+				        <li><a href="#">Faq's</a></li>
+				        <li><a href="#">Contato</a></li>
+				        <li><a href="#">Site Map</a></li>
+				      </ul>
+				    </div>
+				  </div>
+				</div>
+				<!--/Footer-->
+		</section><!--/container-->
+	<!--/scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script>
+	<script src="js/main.js"></script>	
+	</body>
+</html>
