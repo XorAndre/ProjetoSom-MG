@@ -78,11 +78,11 @@ class AppController extends Controller
             foreach ($data['Accesses']['pass'] as $key => $value) {
                 $data['Accesses']['param'] = $value;
                 $acesso = $accesses->patchEntity($acesso, $data);
-                //$accesses->save($acesso);
+                $accesses->save($acesso);
             }
         } else {
             $acesso = $accesses->patchEntity($acesso, $data);
-            //$accesses->save($acesso);
+            $accesses->save($acesso);
         }
     }
 }
