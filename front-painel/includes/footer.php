@@ -15,3 +15,4 @@
 <script>
     new WOW().init();
 </script>       
+<script src='http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js'></script>
