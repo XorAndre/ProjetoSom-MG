@@ -16,7 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-
+use Cake\ORM\TableRegistry;
 /**
  * Application Controller
  *
@@ -71,5 +71,18 @@ class AppController extends Controller
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
         $this->Auth->allow(['display']);
+        $accesses = TableRegistry::get('Accesses');
+        $acesso = $accesses->newEntity();
+        $data['Accesses'] = $this->request->params;
+        if(sizeof($data['Accesses']['pass']) > 0) {
+            foreach ($data['Accesses']['pass'] as $key => $value) {
+                $data['Accesses']['param'] = $value;
+                $acesso = $accesses->patchEntity($acesso, $data);
+                //$accesses->save($acesso);
+            }
+        } else {
+            $acesso = $accesses->patchEntity($acesso, $data);
+            //$accesses->save($acesso);
+        }
     }
 }

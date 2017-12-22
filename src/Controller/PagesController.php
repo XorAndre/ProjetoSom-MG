@@ -14,6 +14,7 @@
  */
 namespace App\Controller;
 
+use Cake\ORM\TableRegistry;
 use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
@@ -58,6 +59,21 @@ class PagesController extends AppController
         $this->set(compact('page', 'subpage'));
 
         try {
+            $accesses = TableRegistry::get('Accesses');
+            $query = $accesses->find()
+                        ->select(['data'])
+                        ->group(['DATE_FORMAT(data, "%Y-%m-%d")']);
+            $query->select(['count' => $query->func()->count('*')]);
+            $query->select(['DATE_FORMAT' => $query->func()->count('*')]);
+            $results = $query->all();
+            foreach ($results as $key => $value) {
+                $json[] = ["#!!Date.UTC(".date_format($value->data, 'Y').",".date_format($value->data, 'm').",".date_format($value->data, 'd'). ")!!#",$value->count];
+            }
+            $string = json_encode($json);
+            $string = str_replace('"#!!','',$string);
+            $string = str_replace('!!#"','',$string);
+            $this->set("data", $string);
+
             $this->render(implode('/', $path));
         } catch (MissingTemplateException $exception) {
             if (Configure::read('debug')) {
