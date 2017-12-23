@@ -1,3 +1,43 @@
+<div id="page-wrapper">
+    <div class="graphs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container demo">
+                      <table class="datatable table table-striped table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Título</th>
+                            <th>Data</th>
+                            <th>Descrição</th>
+                            <th>Foto</th>
+                            <th>Ações</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($news as $news): ?>
+                          <tr class="gradeX">
+                            <td><td><?= h($news->title) ?></td></td>
+                            <td>xx/xx/xxxx</td>
+                            <td>Win 95+</td>
+                            <td class="center"><?= $news->has('image') ? $this->Html->link($news->image->name, ['controller' => 'Images', 'action' => 'view', $news->image->id]) : '' ?></td>
+                            <td class="center">
+                                <?= $this->Html->link(__('VIZUALIZAR'), ['action' => 'view', $news->id]) ?>
+                                <?= $this->Html->link(__('EDITAR'), ['action' => 'edit', $news->id]) ?>
+                                <?= $this->Form->postLink(__('DELETAR'), ['action' => 'delete', $news->id], ['confirm' => __('Are you sure you want to delete # {0}?', $news->id)]) ?>
+                            </td>
+                          </tr>    
+                                    <?php endforeach; ?>                     
+                        </tbody>                        
+                      </table>
+                    </div><!--/.container.demo -->
+                </div>                
+            </div>
+        </div><!--/container-->
+    </div>
+</div>
+
+
 <?php
 /**
  * @var \App\View\AppView $this
@@ -24,18 +64,14 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($news as $news): ?>
+
             <tr>
                 <td><?= $this->Number->format($news->id) ?></td>
                 <td><?= h($news->title) ?></td>
                 <td><?= $news->has('image') ? $this->Html->link($news->image->name, ['controller' => 'Images', 'action' => 'view', $news->image->id]) : '' ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $news->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $news->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $news->id], ['confirm' => __('Are you sure you want to delete # {0}?', $news->id)]) ?>
-                </td>
+
             </tr>
-            <?php endforeach; ?>
+
         </tbody>
     </table>
     <div class="paginator">

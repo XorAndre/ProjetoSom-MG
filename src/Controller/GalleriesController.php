@@ -50,15 +50,38 @@ class GalleriesController extends AppController
      */
     public function add()
     {
+                $this->viewBuilder()->setLayout('admin');
         $gallery = $this->Galleries->newEntity();
         if ($this->request->is('post')) {
-            $gallery = $this->Galleries->patchEntity($gallery, $this->request->getData());
-            if ($this->Galleries->save($gallery)) {
-                $this->Flash->success(__('The gallery has been saved.'));
+            $data = $this->request->data;
+            $capa = $this->Galleries->Images->newEntity();
+            $capa = $this->Galleries->Images->patchEntity($capa,['name' => $data['capa']]);
+            $capa = $this->Galleries->Images->save($capa);
+            if($capa){
+                $data['image_id'] = $capa->id;
+                $gallery = $this->Galleries->patchEntity($gallery, $data);
+                $gallery = $this->Galleries->save($gallery);
+                if ($gallery) {
+                    foreach ($data['fotos'] as $key => $value) {
+                        $img['name'] = $value;
+                        $image = $this->Galleries->Images->newEntity();
+                        $image = $this->Galleries->Images->patchEntity($image,$img);
+                        $image = $this->Galleries->Images->save($image);
+                        if(!$image){
+                            $this->Flash->error('Não foi possível salvar a imagem '. $key.' .');
+                        } else {
+                            $galeriaImagem = $this->Galleries->GalleriesImages->newEntity();
+                            $galeriaImagem = $this->Galleries->GalleriesImages->patchEntity($galeriaImagem, ['gallery_id' => $gallery->id, 'image_id' => $image->id]);
+                            $galeriaImagem = $this->Galleries->GalleriesImages->save($galeriaImagem);
+                        }
+                        unset($img);
+                    }
 
-                return $this->redirect(['action' => 'index']);
+                    $this->Flash->success(__('Galeria Criada!.'));
+                    return $this->redirect(['action' => 'index']);
+                }
             }
-            $this->Flash->error(__('The gallery could not be saved. Please, try again.'));
+            $this->Flash->error(__('A galeria não foi salva, tente novamente.'));
         }
         $images = $this->Galleries->Images->find('list', ['limit' => 200]);
         $this->set(compact('gallery', 'images'));

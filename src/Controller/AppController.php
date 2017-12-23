@@ -48,9 +48,10 @@ class AppController extends Controller
          * Enable the following components for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
-        $this->loadComponent('Security');
         $this->loadComponent('Csrf');
-
+        if(in_array($this->request->params['controller'], ["Albums", "Galleries"]) && $this->request->params['action'] != 'add' )
+            $this->loadComponent('Security');
+        
         $this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [
@@ -74,6 +75,7 @@ class AppController extends Controller
         $accesses = TableRegistry::get('Accesses');
         $acesso = $accesses->newEntity();
         $data['Accesses'] = $this->request->params;
+
         if(sizeof($data['Accesses']['pass']) > 0) {
             foreach ($data['Accesses']['pass'] as $key => $value) {
                 $data['Accesses']['param'] = $value;

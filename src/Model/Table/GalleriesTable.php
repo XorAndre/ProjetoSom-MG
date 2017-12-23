@@ -41,10 +41,9 @@ class GalleriesTable extends Table
             'foreignKey' => 'image_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsToMany('Images', [
+        $this->belongsToMany('GalleriesImages', [
             'foreignKey' => 'gallery_id',
-            'targetForeignKey' => 'image_id',
-            'joinTable' => 'galleries_images'
+            'joinType' => 'INNER'
         ]);
     }
 

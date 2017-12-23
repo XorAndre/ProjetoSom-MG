@@ -28,7 +28,7 @@
             </li>
             <li class="menu-list"><a href="#"><i class="lnr lnr-user"></i> <span>USUÁRIOS</span></a>
                 <ul class="sub-menu-list">
-                     <li><?= $this->Html->link("CADASTRAR", ['controller' => 'users','action' => 'add']) ?></li>
+                 <li><?= $this->Html->link("CADASTRAR", ['controller' => 'users','action' => 'add']) ?></li>
                 </ul>
             </li>                        
             <li><a href="media.html"><i class="lnr lnr-select"></i> <span>SOM-MG RESPONDE</span></a></li>
