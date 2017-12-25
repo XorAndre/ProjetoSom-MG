@@ -50,7 +50,7 @@ class GalleriesController extends AppController
      */
     public function add()
     {
-                $this->viewBuilder()->setLayout('admin');
+        $this->viewBuilder()->setLayout('admin');
         $gallery = $this->Galleries->newEntity();
         if ($this->request->is('post')) {
             $data = $this->request->data;

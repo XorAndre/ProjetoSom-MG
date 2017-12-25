@@ -23,8 +23,9 @@ class UsersController extends AppController
         $this->Flash->success('Deslogado com sucesso.');
         return $this->redirect($this->Auth->logout());
     }
-        public function login()
+    public function login()
     {
+        $this->viewBuilder()->setLayout('login');
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             pr($user);
@@ -42,12 +43,13 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Groups', 'Images']
-        ];
-        $users = $this->paginate($this->Users);
 
+        $users = $this->Users->find('all', ['contain' => 'Groups']);
+        foreach ($users as $key => $value) {
+            $im[] = $this->Users->Images->preparePath($value['image_id']); 
+        }
         $this->set(compact('users'));
+        $this->set(compact('im'));
         $this->set('_serialize', ['users']);
     }
 
@@ -63,7 +65,8 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => ['Groups', 'Images']
         ]);
-
+        $user = $user->toArray();
+        $user['Images'] = $this->Users->Images->preparePath($user['image_id']);
         $this->set('user', $user);
         $this->set('_serialize', ['user']);
     }
@@ -75,16 +78,22 @@ class UsersController extends AppController
      */
     public function add()
     {
+
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
-        }
+            $imagemsalva = $this->Users->Images->saveImage($this->request->getData()['Image']);
+            if($imagemsalva){
+                $data = $this->request->getData();
+                $data['image_id'] = $imagemsalva->id;
+                $user = $this->Users->patchEntity($user, $data);
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(__('The user has been saved.'));
+                    return $this->redirect(['action' => 'index']);
+                } else
+                    $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            }else
+            $this->Flash->error(__('Não foi possivel salvar a imagem.'));
+        } 
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $images = $this->Users->Images->find('list', ['limit' => 200]);
         $this->set(compact('user', 'groups', 'images'));
@@ -104,13 +113,19 @@ class UsersController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
+            $imagemsalva = $this->Users->Images->saveImage($this->request->getData()['Image']);
+            if($imagemsalva){
+                $data = $this->request->getData();
+                $data['image_id'] = $imagemsalva->id;
+            $user = $this->Users->patchEntity($user, $data);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
+        } else 
+            $this->Flash->error(__('Não foi possivel salvar a imagem.'));
         }
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $images = $this->Users->Images->find('list', ['limit' => 200]);

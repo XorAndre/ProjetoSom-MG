@@ -1,61 +1,42 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Groups'), ['controller' => 'Groups', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Group'), ['controller' => 'Groups', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Images'), ['controller' => 'Images', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Image'), ['controller' => 'Images', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="users index large-9 medium-8 columns content">
-    <h3><?= __('Users') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('login') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('group_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($users as $user): ?>
-            <tr>
-                <td><?= $this->Number->format($user->id) ?></td>
-                <td><?= h($user->login) ?></td>
-                <td><?= h($user->password) ?></td>
-                <td><?= $user->has('group') ? $this->Html->link($user->group->title, ['controller' => 'Groups', 'action' => 'view', $user->group->id]) : '' ?></td>
-                <td><?= $user->has('image') ? $this->Html->link($user->image->name, ['controller' => 'Images', 'action' => 'view', $user->image->id]) : '' ?></td>
-                <td><?= h($user->nome) ?></td>
-                <td><?= h($user->email) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+
+<div id="page-wrapper">
+    <div class="graphs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container demo">
+                      <table class="datatable table table-striped table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('group_id') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('email') ?></th>
+                            <th scope="col" class="actions">Imagens</th>
+                            <th scope="col" class="actions"><?= __('Actions') ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $i = 0; ?>
+                        <?php foreach ($users as $user): ?>
+                            <tr class="gradeX">
+                                <td><?= h($user->nome) ?></td>
+                                <td><?= $user->group->title ?></td>
+                                <td><?= h($user->email) ?></td>
+                                <td class="center"><?= $this->Html->image($im[$i]['path'] . '/thumbnail-' . $im[$i++]['name']) ?></td>
+                                <td class="center">
+                                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id],['class' => 'btn btn-success',]) ?>
+                                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id],['class' => 'btn btn-info']) ?>
+                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger','confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>                     
+                    </tbody>                        
+                </table>
+            </div><!--/.container.demo -->
+        </div>                
     </div>
+</div><!--/container-->
 </div>
+
+</tbody>
+</table>

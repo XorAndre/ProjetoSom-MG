@@ -50,7 +50,7 @@ class ImagesTable extends Table
                 $this->addBehavior('Josegonzalez/Upload.Upload', [
             'name' => 
                 [
-                    'path' => 'webroot{DS}files{DS}{model}{DS}{microtime}{time}',
+                    'path' => 'webroot{DS}img{DS}{model}{DS}{microtime}{time}',
                     'fields' => [
                         'dir' => 'path',
                     ],
@@ -121,5 +121,20 @@ class ImagesTable extends Table
         'provider' => 'upload'
     ]);
         return $validator;
+    }
+    function saveImage($image)
+    {
+        $imagemsalva = $this->newEntity();
+        $imagemsalva = $this->patchEntity($imagemsalva, $image);
+        $imagemsalva = $this->save($imagemsalva);
+
+        return $imagemsalva;
+    }
+
+    function preparePath($id){
+            $userImage = $this->get($id);
+            $userImage['path'] = substr($userImage['path'], 12);
+            $userImage['path'] = str_replace('\\', '/', $userImage['path']);
+            return $userImage;
     }
 }

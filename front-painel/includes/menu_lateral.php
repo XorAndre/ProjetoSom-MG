@@ -32,7 +32,7 @@
                         </li>
                         <li class="menu-list"><a href="#"><i class="lnr lnr-user"></i> <span>USUÁRIOS</span></a>
                             <ul class="sub-menu-list">
-                                <li><a href="">USUÁRIOS CADASTRADOS</a> </li>
+                                <li><?= $this->Html->link("CADASTRAR", ['action' => 'index']) ?></li>
                             </ul>
                         </li>                        
                         <li><a href="media.html"><i class="lnr lnr-select"></i> <span>SOM-MG RESPONDE</span></a></li>

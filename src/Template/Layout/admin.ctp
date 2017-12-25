@@ -45,19 +45,21 @@
     </div>
         <?= $this->element('footer') ?>
     </section>
-    <?= $this->Html->script("jquery-1.10.2.min.js") ?>
-    <?= $this->Html->script("Chart.js") ?>
-    <?= $this->Html->script("jquery.nicescroll.js") ?>
-    <?= $this->Html->script("scripts.js") ?>
-    <?= $this->Html->script("bootstrap.min.js") ?>
-    <?= $this->Html->script("classie.js") ?>
-    <?= $this->Html->script("uisearch.js") ?>
-    <script>
-        new UISearch(document.getElementById('sb-search'));
-    </script>
-    <?= $this->Html->script("wow.min.js") ?>
-    <script>
-         new WOW().init();
-    </script>
+<?= $this->Html->script('jquery-1.10.2.min.js') ?>
+<?= $this->Html->script('jquery.nicescroll.js') ?>
+<?= $this->Html->script('scripts.js') ?>
+<?= $this->Html->script('bootstrap.min.js') ?>
+<?= $this->Html->script('classie.js') ?>
+<?= $this->Html->script('uisearch.js') ?>
+<script>
+    new UISearch(document.getElementById('sb-search'));
+</script>
+<?= $this->Html->script('Chart.js') ?>
+<?= $this->Html->script('wow.min.js') ?>
+<script>
+    new WOW().init();
+</script>       
+<?= $this->Html->script('http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js') ?>
+
 </body>
 </html>

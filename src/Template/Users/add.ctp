@@ -1,32 +1,35 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Groups'), ['controller' => 'Groups', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Group'), ['controller' => 'Groups', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Images'), ['controller' => 'Images', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Image'), ['controller' => 'Images', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="users form large-9 medium-8 columns content">
-    <?= $this->Form->create($user) ?>
-    <fieldset>
-        <legend><?= __('Add User') ?></legend>
-        <?php
-            echo $this->Form->control('login');
-            echo $this->Form->control('password');
-            echo $this->Form->control('group_id', ['options' => $groups]);
-            echo $this->Form->control('image_id', ['options' => $images]);
-            echo $this->Form->control('nome');
-            echo $this->Form->control('email');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div id="page-wrapper">
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?= $this->Form->create($user,['type' => 'file']) ?>                    
+                    <div class="form-group">
+                        <label for="thumb-perfil">SELECIONE A FOTO DE PERFIL</label>
+                        <?= $this->Form->control('Image.name',['class' => 'form-control1','type' => 'file','label' => false]); ?>
+                    </div>                    
+                    <div class="form-group">
+                        <?= $this->Form->control('nome',['class' => 'form-control1','label' => false, 'placeholder' => 'Nome']); ?>
+                    </div> 
+                    <div class="form-group">
+                        <?= $this->Form->control('login',['class' => 'form-control1','label' => false, 'placeholder' => 'Login']); ?>
+                    </div> 
+                    <div class="form-group">
+                        <?= $this->Form->control('password',['class' => 'form-control1','label' => false, 'placeholder' => 'Senha']); ?>
+                    </div> 
+                    <div class="form-group">
+                        <?= $this->Form->control('group_id',['class' => 'form-control1','label' => false,['options' => $groups]]); ?>
+                    </div> 
+                    <div class="form-group">
+                        <?= $this->Form->control('email',['class' => 'form-control1','label' => false, 'placeholder' => 'E-mail']); ?>
+                    </div>
+                     <div class="form-group">
+                        <?= $this->Form->button(__('CADASTRAR'), ['class' => "btn btn-success"]) ?>
+                     </div>
+                     <div class="form-group">
+                        <input type="reset" class="btn btn-primary" value="CANCELAR">
+                     </div>
+                <?= $this->Form->end() ?>
+            </div>
+        </div>
+    </div>    
 </div>

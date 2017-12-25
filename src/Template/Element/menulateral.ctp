@@ -28,6 +28,7 @@
             </li>
             <li class="menu-list"><a href="#"><i class="lnr lnr-user"></i> <span>USUÁRIOS</span></a>
                 <ul class="sub-menu-list">
+                 <li><?= $this->Html->link("LISTAR", ['controller' => 'users','action' => 'index']) ?></li>
                  <li><?= $this->Html->link("CADASTRAR", ['controller' => 'users','action' => 'add']) ?></li>
                 </ul>
             </li>                        

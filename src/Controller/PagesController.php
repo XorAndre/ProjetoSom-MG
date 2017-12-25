@@ -57,7 +57,7 @@ class PagesController extends AppController
             $subpage = $path[1];
         }
         $this->set(compact('page', 'subpage'));
-
+        $this->viewBuilder()->setLayout('admin');
         try {
             $accesses = TableRegistry::get('Accesses');
             $query = $accesses->find()

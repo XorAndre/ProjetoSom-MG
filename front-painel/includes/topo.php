@@ -129,7 +129,10 @@
                                             <div class="profile_img">
                                                 <span style="background:url(perfil/perfil.jpg) no-repeat center"> </span>
                                                 <div class="user-name">
-                                                    <p>NOME-USUÁRIO<span>Administrator</span></p>
+                                                    <p><?= $this->request->session()->read("Auth.User.nome") ?>
+                                                        <?php if ($this->request->session()->read("Auth.User.group_id") == 1): ?>
+                                                        <span>Administrator</span></p>
+                                                        <?php endif ?>
                                                 </div>
                                                 <i class="lnr lnr-chevron-down"></i>
                                                 <i class="lnr lnr-chevron-up"></i>

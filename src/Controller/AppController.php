@@ -68,7 +68,12 @@ class AppController extends Controller
              // If unauthorized, return them to page they were just on
             'unauthorizedRedirect' => $this->referer()
         ]);
-
+        $this->viewBuilder()->setLayout('admin');
+        if(!empty($this->Auth->user('id'))){
+            $Images = TableRegistry::get('Images');
+            $userImage = $Images->preparePath($this->Auth->user('image_id'));
+            $this->set('userImage', $userImage);
+        }
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
         $this->Auth->allow(['display']);

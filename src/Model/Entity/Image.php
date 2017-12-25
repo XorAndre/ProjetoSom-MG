@@ -33,4 +33,5 @@ class Image extends Entity
         'news' => true,
         'users' => true
     ];
+
 }

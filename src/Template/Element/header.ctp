@@ -126,10 +126,13 @@
                                 <ul>
                                     <li class="dropdown profile_details_drop">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                            <div class="profile_img">
-                                                <span style="background:url(perfil/perfil.jpg) no-repeat center"> </span>
+                                            <div class="profile_img">>
+                                                <span style="background:url(img/<?= $userImage['path'] ?>/thumbnail-<?= $userImage['name'] ?>) no-repeat center"> </span>
                                                 <div class="user-name">
-                                                    <p>NOME-USUÁRIO<span>Administrator</span></p>
+                                                    <p><?= $this->request->session()->read("Auth.User.nome") ?>
+                                                        <?php if ($this->request->session()->read("Auth.User.group_id") == 1): ?>
+                                                        <span>Administrator</span></p>
+                                                        <?php endif ?>
                                                 </div>
                                                 <i class="lnr lnr-chevron-down"></i>
                                                 <i class="lnr lnr-chevron-up"></i>
@@ -139,7 +142,7 @@
                                         <ul class="dropdown-menu drp-mnu">
                                             <li> <a href="#"><i class="fa fa-cog"></i> Configurações</a> </li>
                                             <li> <a href="#"><i class="fa fa-user"></i>Perfil</a> </li>
-                                            <li> <a href="sign-up.html"><i class="fa fa-sign-out"></i> Sair</a> </li>
+                                            <li> <?= $this->Html->link("<i class=\"fa fa-sign-out\"></i> Sair", ['controller' => 'Users','action' => 'logout'], ['escape' => false]) ?></a> </li>
                                         </ul>
                                     </li>
                                     <div class="clearfix"> </div>
