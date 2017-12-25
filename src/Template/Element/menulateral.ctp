@@ -33,7 +33,7 @@
                 </ul>
             </li>                        
             <li><a href="media.html"><i class="lnr lnr-select"></i> <span>SOM-MG RESPONDE</span></a></li>
-            <li class="menu-list act"><a href="#"><i class="lnr lnr-book"></i><span>CONFIGURAÇÃO</span></a>
+            <li class="menu-list"><a href="#"><i class="lnr lnr-book"></i><span>CONFIGURAÇÃO</span></a>
                 <ul class="sub-menu-list">
                     <li><a href="">BACKUP</a> </li>
                     <li><a href="">SUPORTE DÚVIDAS</a></li>                                

@@ -11,6 +11,12 @@
                         <label for="thumb-perfil">SELECIONE AS FOTOS</label>
                         <?= $this->Form->control('fotos[]',['class' => 'form-control1','type' => 'file', 'multiple' => true,'label' => false]); ?>
                     </div>
+                    <div class="form-group">
+                        <?= $this->Form->control('title',['class' => 'form-control1','label' => false, 'placeholder' => 'Título']); ?>
+                    </div>                     
+                    <div class="form-group">
+                        <?= $this->Form->control('text',['class' => 'form-control1','label' => false, 'placeholder' => 'Texto']); ?>
+                    </div> 
                      <div class="form-group">
                         <?= $this->Form->button(__('CADASTRAR'), ['class' => "btn btn-success"]) ?>
                      </div>

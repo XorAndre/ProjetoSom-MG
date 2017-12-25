@@ -54,11 +54,6 @@ class AlbumsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->date('data')
-            ->requirePresence('data', 'create')
-            ->notEmpty('data');
-
-        $validator
             ->scalar('nome')
             ->maxLength('nome', 100)
             ->requirePresence('nome', 'create')
@@ -66,4 +61,29 @@ class AlbumsTable extends Table
 
         return $validator;
     }
+
+        function deleteUnlinkeds(){
+        $albums = $this->find('all')
+        ->select(['id']);
+        $unlinkeds = $this->Songs->find()
+        ->where(['Songs.album_id NOT IN' => $albums])
+        ->select(['Songs.path', 'Songs.name', 'Songs.id']);
+        foreach ($unlinkeds as $key => $value) {
+            $dir = "../".$value['path'];
+            if (is_dir($dir)) { 
+               $objects = scandir($dir); 
+               foreach ($objects as $object) { 
+                 if ($object != "." && $object != "..") { 
+                   if (is_dir($dir."/".$object))
+                     rrmdir($dir."/".$object);
+                 else
+                     unlink($dir."/".$object); 
+             } 
+         }
+         rmdir($dir); 
+     } 
+     $songToDelete = $this->Songs->get($value['id']);
+     $this->Songs->delete($songToDelete);
+ }
+}
 }

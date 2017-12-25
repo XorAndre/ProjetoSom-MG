@@ -24,7 +24,7 @@ class NewsController extends AppController
         foreach ($news as $key => $value) {
             $im[] = $this->News->Images->preparePath($value['image_id']); 
         }
-        $this->News->Images->deleteUnlinkeds();
+
         $this->set(compact('news'));
         $this->set(compact('im'));
         $this->set('_serialize', ['news']);
@@ -70,6 +70,7 @@ class NewsController extends AppController
             }else
             $this->Flash->error(__('Não foi possivel salvar a imagem.'));
         }
+        $this->News->Images->deleteUnlinkeds();
         $images = $this->News->Images->find('list', ['limit' => 200]);
         $this->set(compact('news', 'images'));
         $this->set('_serialize', ['news']);
@@ -102,6 +103,7 @@ class NewsController extends AppController
 
             $this->Flash->error(__('The news could not be saved. Please, try again.'));
         }
+        $this->News->Images->deleteUnlinkeds();
         $images = $this->News->Images->find('list', ['limit' => 200]);
         $this->set(compact('news', 'images'));
         $this->set('_serialize', ['news']);

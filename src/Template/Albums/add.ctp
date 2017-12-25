@@ -6,11 +6,7 @@
                     <div class="form-group">
                         <label for="thumb-perfil">SELECIONE AS MUSICAS</label>
                         <?= $this->Form->control('Songs.file[]',['class' => 'form-control1','type' => 'file', 'multiple' => true,'label' => false]); ?>
-                    </div>
-                    <?= $this->Form->unlockField('field'); ?>
-                    <div class="form-group">
-                        <?= $this->Form->control('data',['class' => 'form-control1','label' => false]); ?>
-                    </div>                    
+                    </div>       
                     <div class="form-group">
                         <?= $this->Form->control('nome',['class' => 'form-control1', 'placeholder' => 'TITULO','label' => false]); ?>
                     </div>

@@ -20,9 +20,13 @@ class GalleriesController extends AppController
      */
     public function index()
     {
-        $galleries = $this->paginate($this->Galleries);
+        $galleries = $this->Galleries->find('all');
+        foreach ($galleries as $key => $value) {
+            $im[] = $this->Galleries->Images->preparePath($value['image_id']); 
+        }
 
         $this->set(compact('galleries'));
+        $this->set(compact('im'));
         $this->set('_serialize', ['galleries']);
     }
 
@@ -83,6 +87,7 @@ class GalleriesController extends AppController
             }
             $this->Flash->error(__('A galeria não foi salva, tente novamente.'));
         }
+        $this->Galleries->Images->deleteUnlinkeds();
         $images = $this->Galleries->Images->find('list', ['limit' => 200]);
         $this->set(compact('gallery', 'images'));
         $this->set('_serialize', ['gallery']);
@@ -109,6 +114,7 @@ class GalleriesController extends AppController
             }
             $this->Flash->error(__('The gallery could not be saved. Please, try again.'));
         }
+        $this->Galleries->Images->deleteUnlinkeds();
         $images = $this->Galleries->Images->find('list', ['limit' => 200]);
         $this->set(compact('gallery', 'images'));
         $this->set('_serialize', ['gallery']);

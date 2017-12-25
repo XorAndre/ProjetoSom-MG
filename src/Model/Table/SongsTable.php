@@ -43,7 +43,7 @@ class SongsTable extends Table
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'file' => 
                 [
-                    'path' => 'webroot{DS}files{DS}{model}{DS}{microtime}{time}',
+                    'path' => 'webroot{DS}files{DS}{model}{DS}{field-value:album_id}',
                     'fields' => [
                         'dir' => 'path',
                     ],
@@ -67,19 +67,13 @@ class SongsTable extends Table
             ->integer('id')
             ->allowEmpty('id', 'create');
 
-        $validator
-            ->scalar('name')
-            ->maxLength('name', 100)
-            ->requirePresence('name', 'create')
-            ->notEmpty('name');
-
-        $validator->add('name', 'validExtension', [
+        $validator->add('file', 'validExtension', [
                     'rule' => ['extension',['mp3']],
                     'message' => __('These files extension are allowed: .mp3')
                 ]);
 
-        $validator->add('name', 'fileBelowMaxSize', [
-            'rule' => ['isBelowMaxSize', 10240],
+        $validator->add('file', 'fileBelowMaxSize', [
+            'rule' => ['isBelowMaxSize', 10240000],
             'message' => 'This file is too large',
             'provider' => 'upload'
          ]);
@@ -98,5 +92,19 @@ class SongsTable extends Table
         $rules->add($rules->existsIn(['album_id'], 'Albums'));
 
         return $rules;
+    }
+
+        function saveSongs($songs, $id)
+    {
+        foreach ($songs as $key => $song) {
+            $musicasalva = $this->newEntity();
+            $s['file'] = $song;
+            $s['album_id'] = $id;
+            $s['name'] = $song['name'];
+            pr($s);
+            $musicasalva = $this->patchEntity($musicasalva, $s);
+            pr($musicasalva->errors());
+            $musicasalva = $this->save($musicasalva);
+        }
     }
 }

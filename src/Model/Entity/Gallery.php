@@ -25,6 +25,9 @@ class Gallery extends Entity
      */
     protected $_accessible = [
         'image_id' => true,
+        'data' => true,
+        'text' => true,
+        'title' => true,
         'images' => true
     ];
 }

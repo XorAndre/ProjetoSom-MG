@@ -20,8 +20,8 @@ class AlbumsController extends AppController
      */
     public function index()
     {
-        $albums = $this->paginate($this->Albums);
-
+        $albums = $this->Albums->find('all', ['contain' => 'Songs']);
+        $this->Albums->deleteUnlinkeds();
         $this->set(compact('albums'));
         $this->set('_serialize', ['albums']);
     }
@@ -48,15 +48,38 @@ class AlbumsController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
+    public function editMusics($id){
+        $album_songs = $this->Albums->get($id, [
+            'contain' => ['Songs']
+        ]);
+        $album = $this->Albums->newEntity();
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $data = $this->request->getData();
+            foreach ($data['Song'] as $key => $value) {
+                $song = $this->Albums->Songs->get($value['id'], [
+                    'contain' => []
+                     ]);
+                $song = $this->Albums->Songs->patchEntity($song, $value);
+                $song = $this->Albums->Songs->save($song);
+            }
+            return $this->redirect(['action' => 'index']);
+        }
+        $this->set(compact('album'));
+        $this->set('album_songs', $album_songs);
+        $this->set('_serialize', ['album']);
+    }
+
     public function add()
     {
         $album = $this->Albums->newEntity();
         if ($this->request->is('post')) {
             $album = $this->Albums->patchEntity($album, $this->request->getData());
-            if ($this->Albums->save($album)) {
+            $album = $this->Albums->save($album);
+            if ($album) {
+                $this->Albums->Songs->saveSongs($this->request->getData()['Songs']['file'], $album->id);
                 $this->Flash->success(__('The album has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'editMusics', $album->id]);
             }
             $this->Flash->error(__('The album could not be saved. Please, try again.'));
         }

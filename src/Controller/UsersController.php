@@ -93,6 +93,7 @@ class UsersController extends AppController
             }else
             $this->Flash->error(__('Não foi possivel salvar a imagem.'));
         } 
+        $this->Users->Images->deleteUnlinkeds();
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $images = $this->Users->Images->find('list', ['limit' => 200]);
         $this->set(compact('user', 'groups', 'images'));
@@ -126,6 +127,7 @@ class UsersController extends AppController
         } else 
             $this->Flash->error(__('Não foi possivel salvar a imagem.'));
         }
+        $this->Users->Images->deleteUnlinkeds();
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $images = $this->Users->Images->find('list', ['limit' => 200]);
         $this->set(compact('user', 'groups', 'images'));

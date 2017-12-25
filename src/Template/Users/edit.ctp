@@ -23,7 +23,7 @@
                         <?= $this->Form->control('email',['class' => 'form-control1','label' => false, 'placeholder' => 'E-mail']); ?>
                     </div>
                      <div class="form-group">
-                        <?= $this->Form->button(__('CADASTRAR'), ['class' => "btn btn-success"]) ?>
+                        <?= $this->Form->button(__('EDITAR'), ['class' => "btn btn-success"]) ?>
                      </div>
                      <div class="form-group">
                         <input type="reset" class="btn btn-primary" value="CANCELAR">

@@ -1,51 +1,40 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Album[]|\Cake\Collection\CollectionInterface $albums
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Album'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Songs'), ['controller' => 'Songs', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Song'), ['controller' => 'Songs', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="albums index large-9 medium-8 columns content">
-    <h3><?= __('Albums') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('data') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($albums as $album): ?>
-            <tr>
-                <td><?= $this->Number->format($album->id) ?></td>
-                <td><?= h($album->data) ?></td>
-                <td><?= h($album->nome) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $album->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $album->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $album->id], ['confirm' => __('Are you sure you want to delete # {0}?', $album->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+<div id="page-wrapper">
+    <div class="graphs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container demo">
+                      <table class="datatable table table-striped table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Título</th>
+                            <th>Data</th>
+                            <th>Musicas</th>
+                            <th>Ações</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($albums as $album): ?>
+                          <tr class="gradeX">
+                            <td><?= $album->nome ?></td>
+                            <td><?= $album->data ?></td>
+                            <td>
+                                <?php foreach ($album['songs'] as $key => $value): ?>
+                                    <?php echo $value['name'] . "," ?>
+                                <?php endforeach ?>
+                            </td>
+                                <td class="center">
+                                    <?= $this->Html->link(__('View'), ['action' => 'view', $album->id],['class' => 'btn btn-success',]) ?>
+                                    <?= $this->Html->link(__('Edit'), ['action' => '#'],['class' => 'btn btn-info']) ?>
+                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $album->id], ['class' => 'btn btn-danger','confirm' => __('Tem certeza que deseja deletar {0}?', $album->nome)]) ?>
+                                </td>
+                          </tr>    
+                        <?php endforeach; ?>                     
+                        </tbody>                        
+                      </table>
+                    </div><!--/.container.demo -->
+                </div>                
+            </div>
+        </div><!--/container-->
     </div>
 </div>

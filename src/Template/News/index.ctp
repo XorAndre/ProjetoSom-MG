@@ -16,16 +16,16 @@
                         </thead>
                         <tbody>
                             <?php $i = 0 ?>
-                        <?php foreach ($news as $news): ?>
+                        <?php foreach ($news as $new): ?>
                           <tr class="gradeX">
-                            <td><?= $news->title ?></td>
-                            <td><?= $news->data ?></td>
-                            <td><?= $news->text ?></td>
+                            <td><?= $new->title ?></td>
+                            <td><?= $new->data ?></td>
+                            <td><?= $new->text ?></td>
                             <td class="center"><?= $this->Html->image($im[$i]['path'] . '/thumbnail-' . $im[$i++]['name']) ?></td>
                                 <td class="center">
-                                    <?= $this->Html->link(__('View'), ['action' => 'view', $news->id],['class' => 'btn btn-success',]) ?>
-                                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $news->id],['class' => 'btn btn-info']) ?>
-                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $news->id], ['class' => 'btn btn-danger','confirm' => __('Tem certeza que deseja deletar {0}?', $news->title)]) ?>
+                                    <?= $this->Html->link(__('View'), ['action' => 'view', $new->id],['class' => 'btn btn-success',]) ?>
+                                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $new->id],['class' => 'btn btn-info']) ?>
+                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $new->id], ['class' => 'btn btn-danger','confirm' => __('Tem certeza que deseja deletar {0}?', $new->title)]) ?>
                                 </td>
                           </tr>    
                         <?php endforeach; ?>                     

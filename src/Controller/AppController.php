@@ -49,7 +49,8 @@ class AppController extends Controller
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         $this->loadComponent('Csrf');
-        if(in_array($this->request->params['controller'], ["Albums", "Galleries"]) && $this->request->params['action'] != 'add' )
+        if(!in_array($this->request->params['controller'], ["Albums", "Galleries"]) && 
+           !in_array($this->request->params['action'], ["add", "edit"] ))
             $this->loadComponent('Security');
         
         $this->loadComponent('Auth', [
