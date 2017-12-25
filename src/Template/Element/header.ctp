@@ -141,7 +141,7 @@
                                         </a>
                                         <ul class="dropdown-menu drp-mnu">
                                             <li> <a href="#"><i class="fa fa-cog"></i> Configurações</a> </li>
-                                            <li> <a href="#"><i class="fa fa-user"></i>Perfil</a> </li>
+                                            <li> <?= $this->Html->link("<i class=\"fa fa-user\"></i> Perfil", ['controller' => 'Users','action' => 'view', $this->request->session()->read("Auth.User.id")], ['escape' => false]) ?></a> </li>
                                             <li> <?= $this->Html->link("<i class=\"fa fa-sign-out\"></i> Sair", ['controller' => 'Users','action' => 'logout'], ['escape' => false]) ?></a> </li>
                                         </ul>
                                     </li>

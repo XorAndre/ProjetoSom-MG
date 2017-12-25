@@ -1,33 +1,26 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\News $news
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $news->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $news->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List News'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Images'), ['controller' => 'Images', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Image'), ['controller' => 'Images', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="news form large-9 medium-8 columns content">
-    <?= $this->Form->create($news) ?>
-    <fieldset>
-        <legend><?= __('Edit News') ?></legend>
-        <?php
-            echo $this->Form->control('title');
-            echo $this->Form->control('text');
-            echo $this->Form->control('image_id', ['options' => $images]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div id="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?= $this->Form->create($news,['type' => 'file']) ?>                    
+                    <div class="form-group">
+                        <label for="thumb-perfil">SELECIONE A IMAGEM DE DESTAQUE</label>
+                        <?= $this->Form->control('Image.name',['class' => 'form-control1','type' => 'file','label' => false]); ?>
+                    </div>                    
+                    <div class="form-group">
+                        <?= $this->Form->control('title',['class' => 'form-control1','label' => false, 'placeholder' => 'Título']); ?>
+                    </div> 
+                    <div class="form-group">
+                        <?= $this->Form->control('text',['class' => 'form-control1','label' => false, 'placeholder' => 'Texto']); ?>
+                    </div> 
+                     <div class="form-group">
+                        <?= $this->Form->button(__('CADASTRAR'), ['class' => "btn btn-success"]) ?>
+                     </div>
+                     <div class="form-group">
+                        <input type="reset" class="btn btn-primary" value="CANCELAR">
+                     </div>
+                <?= $this->Form->end() ?>
+            </div>
+        </div>
+    </div>    
 </div>

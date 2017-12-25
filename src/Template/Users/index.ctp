@@ -1,4 +1,3 @@
-
 <div id="page-wrapper">
     <div class="graphs">
         <div class="container">
@@ -8,12 +7,12 @@
                       <table class="datatable table table-striped table-bordered">
                         <thead>
                           <tr>
-                            <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('group_id') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                            <th scope="col" class="actions">Imagens</th>
-                            <th scope="col" class="actions"><?= __('Actions') ?></th>
-                        </tr>
+                            <th>Nome</th>
+                            <th>Função</th>
+                            <th>E-mail</th>                           
+                            <th>Foto</th>
+                            <th>Ações</th>
+                          </tr>
                     </thead>
                     <tbody>
                         <?php $i = 0; ?>
@@ -26,7 +25,7 @@
                                 <td class="center">
                                     <?= $this->Html->link(__('View'), ['action' => 'view', $user->id],['class' => 'btn btn-success',]) ?>
                                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id],['class' => 'btn btn-info']) ?>
-                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger','confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger','confirm' => __('Tem certeza que deseja deletar {0}?', $user->nome)]) ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>                     
