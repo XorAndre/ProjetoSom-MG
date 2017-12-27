@@ -16,7 +16,6 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-use Cake\I18n\Time;
 use Cake\ORM\TableRegistry;
 /**
  * Application Controller
@@ -38,17 +37,10 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function beforeFilter(Event $event){
-        $news = TableRegistry::get('News');
-        $query = $news->find('all')->order(['data' => 'desc'])->limit('5');
-        $result = $query->all();
-        $this->set('ultimasnoticias', $result);
-    }
-
     public function initialize()
     {
         parent::initialize();
-        Time::setDefaultLocale('pt_BR');
+
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
 
@@ -83,6 +75,9 @@ class AppController extends Controller
             $userImage = $Images->preparePath($this->Auth->user('image_id'));
             $this->set('userImage', $userImage);
         }
+        // Allow the display action so our PagesController
+        // continues to work. Also enable the read only actions.
+        $this->Auth->allow(['display']);
         $accesses = TableRegistry::get('Accesses');
         $acesso = $accesses->newEntity();
         $data['Accesses'] = $this->request->params;

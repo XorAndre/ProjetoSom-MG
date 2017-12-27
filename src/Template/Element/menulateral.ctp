@@ -7,7 +7,8 @@
     </div>
     <div class="left-side-inner">
         <ul class="nav nav-pills nav-stacked custom-nav">
-            <li><a href="index.html"><i class="lnr lnr-power-switch"></i><span>INÍCIO</span></a></li>
+            <li>
+                <?= $this->Html->link("<i class=\"lnr lnr-power-switch\"></i> INÍCIO", ['controller' => '/','action' => '/'], ['escape' => false]) ?>
             <li class="menu-list">
 
                 <a href="#"><i class="lnr lnr-pencil"></i>
@@ -15,6 +16,7 @@
                 <ul class="sub-menu-list">
                     <li><?= $this->Html->link("NOTICIAS", ['controller' => 'news','action' => 'add']) ?></li>
                     <li><?= $this->Html->link("GALERIA DE FOTOS", ['controller' => 'galleries','action' => 'add']) ?></li>
+                    <li><?= $this->Html->link("DESTAQUES", ['controller' => 'focuses','action' => 'add']) ?></li>
                     <li><?= $this->Html->link("MUSICAS", ['controller' => 'albums','action' => 'add']) ?></li>
                    
                     <li><a href="">AGENDA</a></li>

@@ -43,6 +43,9 @@ class ImagesTable extends Table
         ]);
         $this->hasMany('News', [
             'foreignKey' => 'image_id'
+        ]);        
+        $this->hasMany('Focuses', [
+            'foreignKey' => 'image_id'
         ]);
         $this->hasMany('Users', [
             'foreignKey' => 'image_id'
@@ -73,7 +76,7 @@ class ImagesTable extends Table
                     $tmp = tempnam(sys_get_temp_dir(), 'upload') . '.' . $extension;
 
                         // Use the Imagine library to DO THE THING
-                    $size = new \Imagine\Image\Box(40, 40);
+                    $size = new \Imagine\Image\Box(315, 230);
                     $mode = \Imagine\Image\ImageInterface::THUMBNAIL_INSET;
                     $imagine = new \Imagine\Gd\Imagine();
 
@@ -152,12 +155,15 @@ class ImagesTable extends Table
         $galleries = $this->Galleries->find('all')
         ->select(['image_id']);
         $galleriesImages = $this->GalleriesImages->find('all')
+        ->select(['image_id']);        
+        $focuses = $this->Focuses->find('all')
         ->select(['image_id']);
         $unlinkeds = $this->find()
         ->where(['Images.id NOT IN' => $news])
         ->where(['Images.id NOT IN' => $users])
         ->where(['Images.id NOT IN' => $galleries])
         ->where(['Images.id NOT IN' => $galleriesImages])
+        ->where(['Images.id NOT IN' => $focuses])
         ->select(['path', 'name', 'id']);
         foreach ($unlinkeds as $key => $value) {
             $dir = "../".$value['path'];

@@ -18,6 +18,11 @@ class NewsController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['view']);
+    }
     public function index()
     {
         $news = $this->News->find('all');
@@ -39,10 +44,9 @@ class NewsController extends AppController
      */
     public function view($id = null)
     {
-        $news = $this->News->get($id, [
-            'contain' => ['Images']
-        ]);
-
+        $this->viewBuilder()->setLayout('site');
+        $news = $this->News->get($id);
+        $news['Image'] = $this->News->Images->preparePath($news['image_id']);
         $this->set('news', $news);
         $this->set('_serialize', ['news']);
     }

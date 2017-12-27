@@ -12,7 +12,11 @@ use App\Controller\AppController;
  */
 class GalleriesController extends AppController
 {
-
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['view']);
+    }
     /**
      * Index method
      *
@@ -39,6 +43,7 @@ class GalleriesController extends AppController
      */
     public function view($id = null)
     {
+                $this->viewBuilder()->setLayout('site');
         $gallery = $this->Galleries->get($id, [
             'contain' => ['Images']
         ]);
@@ -131,11 +136,9 @@ class GalleriesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $gallery = $this->Galleries->get($id);
-        if ($this->Galleries->delete($gallery)) {
-            $this->Flash->success(__('The gallery has been deleted.'));
-        } else {
-            $this->Flash->error(__('The gallery could not be deleted. Please, try again.'));
-        }
+
+        $this->Galleries->GalleriesImages->deleteAll(['gallery_id' => $id]);
+        $this->Galleries->deleteAll(['id' => $id]);
 
         return $this->redirect(['action' => 'index']);
     }
