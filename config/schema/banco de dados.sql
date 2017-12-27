@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Dez-2017 às 17:18
+-- Generation Time: 27-Dez-2017 às 18:46
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -2389,7 +2389,631 @@ INSERT INTO `accesses` (`id`, `controller`, `action`, `param`, `data`) VALUES
 (2346, 'Users', 'login', NULL, '2017-12-25 16:09:05'),
 (2347, 'Pages', 'display', 'home', '2017-12-25 16:09:06'),
 (2348, 'Images', '1.png', NULL, '2017-12-25 16:09:06'),
-(2349, 'Images', 'search.png', NULL, '2017-12-25 16:09:06');
+(2349, 'Images', 'search.png', NULL, '2017-12-25 16:09:06'),
+(2350, 'Users', 'index', NULL, '2017-12-27 13:49:16'),
+(2351, 'Users', 'login', NULL, '2017-12-27 13:49:17'),
+(2352, 'Images', '6.png', NULL, '2017-12-27 13:49:18'),
+(2353, 'Images', 'user.png', NULL, '2017-12-27 13:49:18'),
+(2354, 'Images', '3.jpg', NULL, '2017-12-27 13:49:19'),
+(2355, 'Users', 'login', NULL, '2017-12-27 13:49:21'),
+(2356, 'Users', 'index', NULL, '2017-12-27 13:49:22'),
+(2357, 'Images', 'search.png', NULL, '2017-12-27 13:49:23'),
+(2358, 'Images', '1.png', NULL, '2017-12-27 13:49:23'),
+(2359, 'Pages', 'display', 'home', '2017-12-27 13:49:50'),
+(2360, 'Images', '1.png', NULL, '2017-12-27 13:49:50'),
+(2361, 'Images', 'search.png', NULL, '2017-12-27 13:49:51'),
+(2362, 'Pages', 'display', 'home', '2017-12-27 13:50:02'),
+(2363, 'Images', '1.png', NULL, '2017-12-27 13:50:03'),
+(2364, 'Images', 'search.png', NULL, '2017-12-27 13:50:03'),
+(2365, 'Pages', 'display', 'home', '2017-12-27 13:50:27'),
+(2366, 'Images', '1.png', NULL, '2017-12-27 13:50:28'),
+(2367, 'Images', 'search.png', NULL, '2017-12-27 13:50:28'),
+(2368, 'Pages', 'display', 'home', '2017-12-27 13:50:33'),
+(2369, 'Images', '1.png', NULL, '2017-12-27 13:50:34'),
+(2370, 'Images', 'search.png', NULL, '2017-12-27 13:50:35'),
+(2371, 'Pages', 'display', 'adminHome', '2017-12-27 13:51:38'),
+(2372, 'Pages', 'display', '1.png', '2017-12-27 13:51:39'),
+(2373, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:51:39'),
+(2374, 'Images', 'search.png', NULL, '2017-12-27 13:51:39'),
+(2375, 'Pages', 'display', 'adminHome', '2017-12-27 13:51:51'),
+(2376, 'Pages', 'display', '1.png', '2017-12-27 13:51:51'),
+(2377, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:51:51'),
+(2378, 'Images', 'search.png', NULL, '2017-12-27 13:51:52'),
+(2379, 'Pages', 'display', 'adminHomee', '2017-12-27 13:51:59'),
+(2380, 'Pages', 'display', 'adminHome', '2017-12-27 13:52:02'),
+(2381, 'Pages', 'display', '1.png', '2017-12-27 13:52:03'),
+(2382, 'Images', 'search.png', NULL, '2017-12-27 13:52:03'),
+(2383, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:52:03'),
+(2384, 'Pages', 'display', 'adminHome', '2017-12-27 13:52:07'),
+(2385, 'Pages', 'display', '1.png', '2017-12-27 13:52:08'),
+(2386, 'Images', 'search.png', NULL, '2017-12-27 13:52:08'),
+(2387, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:52:08'),
+(2388, 'Pages', 'display', 'adminHome', '2017-12-27 13:53:02'),
+(2389, 'Pages', 'display', '1.png', '2017-12-27 13:53:03'),
+(2390, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:53:03'),
+(2391, 'Images', 'search.png', NULL, '2017-12-27 13:53:03'),
+(2392, 'Pages', 'display', 'adminHome', '2017-12-27 13:53:18'),
+(2393, 'Pages', 'display', '1.png', '2017-12-27 13:53:19'),
+(2394, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:53:19'),
+(2395, 'Images', 'search.png', NULL, '2017-12-27 13:53:19'),
+(2396, 'Pages', 'display', 'adminHome', '2017-12-27 13:53:33'),
+(2397, 'Pages', 'display', '1.png', '2017-12-27 13:53:34'),
+(2398, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:53:34'),
+(2399, 'Images', 'search.png', NULL, '2017-12-27 13:53:35'),
+(2400, 'Pages', 'display', 'adminHome', '2017-12-27 13:53:58'),
+(2401, 'Pages', 'display', '1.png', '2017-12-27 13:53:59'),
+(2402, 'Images', 'search.png', NULL, '2017-12-27 13:53:59'),
+(2403, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:53:59'),
+(2404, 'Pages', 'display', 'adminHome', '2017-12-27 13:54:19'),
+(2405, 'Pages', 'display', '1.png', '2017-12-27 13:54:19'),
+(2406, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:54:20'),
+(2407, 'Images', 'search.png', NULL, '2017-12-27 13:54:20'),
+(2408, 'Pages', 'display', 'adminHome', '2017-12-27 13:54:49'),
+(2409, 'Pages', 'display', '1.png', '2017-12-27 13:54:50'),
+(2410, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:54:50'),
+(2411, 'Images', 'search.png', NULL, '2017-12-27 13:54:50'),
+(2412, 'Pages', 'display', 'adminHome', '2017-12-27 13:54:58'),
+(2413, 'Pages', 'display', '1.png', '2017-12-27 13:54:59'),
+(2414, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 13:54:59'),
+(2415, 'Images', 'search.png', NULL, '2017-12-27 13:54:59'),
+(2416, 'Pages', 'display', 'home', '2017-12-27 13:55:04'),
+(2417, 'Images', '1.png', NULL, '2017-12-27 13:55:04'),
+(2418, 'Images', 'search.png', NULL, '2017-12-27 13:55:04'),
+(2419, 'Pages', 'display', 'home', '2017-12-27 13:56:42'),
+(2420, 'Pages', 'display', 'home', '2017-12-27 13:58:29'),
+(2421, 'Pages', 'display', 'home', '2017-12-27 13:59:02'),
+(2422, 'Pages', 'display', 'home', '2017-12-27 13:59:54'),
+(2423, 'Pages', 'display', 'home', '2017-12-27 14:00:16'),
+(2424, 'Pages', 'display', 'home', '2017-12-27 14:00:39'),
+(2425, 'Pages', 'display', 'home', '2017-12-27 14:01:12'),
+(2426, 'Pages', 'display', 'home', '2017-12-27 14:02:15'),
+(2427, 'Users', 'index', NULL, '2017-12-27 14:03:17'),
+(2428, 'Users', 'images', '1.png', '2017-12-27 14:03:18'),
+(2429, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 14:03:18'),
+(2430, 'Images', 'search.png', NULL, '2017-12-27 14:03:18'),
+(2431, 'Users', 'view', '6', '2017-12-27 14:03:20'),
+(2432, 'Users', 'view', '1.png', '2017-12-27 14:03:22'),
+(2433, 'Users', 'view', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 14:03:22'),
+(2434, 'Images', 'search.png', NULL, '2017-12-27 14:03:22'),
+(2435, 'Users', 'add', NULL, '2017-12-27 14:03:27'),
+(2436, 'Users', 'images', '1.png', '2017-12-27 14:03:27'),
+(2437, 'Images', 'search.png', NULL, '2017-12-27 14:03:28'),
+(2438, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 14:03:28'),
+(2439, 'Users', 'index', NULL, '2017-12-27 14:03:31'),
+(2440, 'Images', '1.png', NULL, '2017-12-27 14:03:31'),
+(2441, 'Images', 'search.png', NULL, '2017-12-27 14:03:31'),
+(2442, 'News', 'add', NULL, '2017-12-27 14:03:37'),
+(2443, 'News', 'images', '1.png', '2017-12-27 14:03:38'),
+(2444, 'Images', 'search.png', NULL, '2017-12-27 14:03:38'),
+(2445, 'News', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 14:03:38'),
+(2446, 'Pages', 'display', 'home', '2017-12-27 14:03:42'),
+(2447, 'Pages', 'display', 'adminHome', '2017-12-27 14:03:46'),
+(2448, 'Pages', 'display', '1.png', '2017-12-27 14:03:47'),
+(2449, 'Pages', 'display', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 14:03:47'),
+(2450, 'Images', 'search.png', NULL, '2017-12-27 14:03:47'),
+(2451, 'Pages', 'display', 'home', '2017-12-27 14:03:51'),
+(2452, 'Pages', 'display', 'home', '2017-12-27 14:10:53'),
+(2453, 'Pages', 'display', 'home', '2017-12-27 14:12:07'),
+(2454, 'Pages', 'display', 'home', '2017-12-27 14:13:23'),
+(2455, 'Pages', 'display', 'home', '2017-12-27 14:14:57'),
+(2456, 'Pages', 'display', 'home', '2017-12-27 14:16:52'),
+(2457, 'Pages', 'display', 'home', '2017-12-27 14:17:40'),
+(2458, 'Pages', 'display', 'home', '2017-12-27 14:19:59'),
+(2459, 'Pages', 'display', 'home', '2017-12-27 14:20:30'),
+(2460, 'Pages', 'display', 'home', '2017-12-27 14:20:43'),
+(2461, 'Pages', 'display', 'home', '2017-12-27 14:21:10'),
+(2462, 'Pages', 'display', 'home', '2017-12-27 14:21:23'),
+(2463, 'Pages', 'display', 'home', '2017-12-27 14:23:44'),
+(2464, 'Pages', 'display', 'home', '2017-12-27 14:23:50'),
+(2465, 'Pages', 'display', 'home', '2017-12-27 14:26:21'),
+(2466, 'Pages', 'display', 'home', '2017-12-27 14:26:30'),
+(2467, 'Pages', 'display', 'home', '2017-12-27 14:29:26'),
+(2468, 'Pages', 'display', 'home', '2017-12-27 14:29:39'),
+(2469, 'Pages', 'display', 'home', '2017-12-27 14:30:24'),
+(2470, 'Pages', 'display', 'home', '2017-12-27 14:30:27'),
+(2471, 'Pages', 'display', 'home', '2017-12-27 14:30:36'),
+(2472, 'Pages', 'display', 'home', '2017-12-27 14:31:38'),
+(2473, 'Pages', 'display', 'home', '2017-12-27 14:47:37'),
+(2474, 'Pages', 'display', 'home', '2017-12-27 14:48:05'),
+(2475, 'Pages', 'display', 'home', '2017-12-27 14:48:40'),
+(2476, 'Pages', 'display', 'home', '2017-12-27 14:49:03'),
+(2477, 'Pages', 'display', 'home', '2017-12-27 14:50:09'),
+(2478, 'Pages', 'display', 'home', '2017-12-27 14:50:56'),
+(2479, 'Pages', 'display', 'home', '2017-12-27 14:51:19'),
+(2480, 'Pages', 'display', 'home', '2017-12-27 14:55:55'),
+(2481, 'Pages', 'display', 'home', '2017-12-27 14:56:59'),
+(2482, 'Pages', 'display', 'home', '2017-12-27 14:57:13'),
+(2483, 'Pages', 'display', 'home', '2017-12-27 14:58:58'),
+(2484, 'Pages', 'display', 'home', '2017-12-27 14:59:18'),
+(2485, 'Pages', 'display', 'home', '2017-12-27 15:00:11'),
+(2486, 'Pages', 'display', 'home', '2017-12-27 15:00:28'),
+(2487, 'Pages', 'display', 'home', '2017-12-27 15:00:39'),
+(2488, 'Pages', 'display', 'home', '2017-12-27 15:01:34'),
+(2489, 'Pages', 'display', 'home', '2017-12-27 15:01:39'),
+(2490, 'Pages', 'display', 'home', '2017-12-27 15:01:47'),
+(2491, 'Pages', 'display', 'home', '2017-12-27 15:01:54'),
+(2492, 'Pages', 'display', 'home', '2017-12-27 15:02:23'),
+(2493, 'Pages', 'display', 'home', '2017-12-27 15:02:33'),
+(2494, 'Pages', 'display', 'home', '2017-12-27 15:04:10'),
+(2495, 'Pages', 'display', 'home', '2017-12-27 15:04:34'),
+(2496, 'Pages', 'display', 'home', '2017-12-27 15:06:20'),
+(2497, 'Pages', 'display', 'home', '2017-12-27 15:06:26'),
+(2498, 'Pages', 'display', 'home', '2017-12-27 15:06:51'),
+(2499, 'Pages', 'display', 'home', '2017-12-27 15:07:20'),
+(2500, 'Pages', 'display', 'home', '2017-12-27 15:08:26'),
+(2501, 'Pages', 'display', 'home', '2017-12-27 15:08:35'),
+(2502, 'Pages', 'display', 'home', '2017-12-27 15:09:58'),
+(2503, 'Pages', 'display', 'home', '2017-12-27 15:10:23'),
+(2504, 'Pages', 'display', 'home', '2017-12-27 15:10:29');
+INSERT INTO `accesses` (`id`, `controller`, `action`, `param`, `data`) VALUES
+(2505, 'Pages', 'display', 'home', '2017-12-27 15:10:34'),
+(2506, 'Pages', 'display', 'home', '2017-12-27 15:10:38'),
+(2507, 'Pages', 'display', 'home', '2017-12-27 15:10:41'),
+(2508, 'Pages', 'display', 'home', '2017-12-27 15:11:16'),
+(2509, 'Pages', 'display', 'home', '2017-12-27 15:11:31'),
+(2510, 'Pages', 'display', 'home', '2017-12-27 15:11:36'),
+(2511, 'Pages', 'display', 'home', '2017-12-27 15:12:14'),
+(2512, 'Pages', 'display', 'home', '2017-12-27 15:12:23'),
+(2513, 'Pages', 'display', 'home', '2017-12-27 15:15:03'),
+(2514, 'Pages', 'display', 'home', '2017-12-27 15:15:11'),
+(2515, 'Pages', 'display', 'home', '2017-12-27 15:15:19'),
+(2516, 'Pages', 'display', 'home', '2017-12-27 15:15:23'),
+(2517, 'Pages', 'display', 'home', '2017-12-27 15:15:28'),
+(2518, 'Pages', 'display', 'home', '2017-12-27 15:16:46'),
+(2519, 'Pages', 'display', 'home', '2017-12-27 15:17:08'),
+(2520, 'News', 'view', '2', '2017-12-27 15:17:19'),
+(2521, 'News', 'view', '1.png', '2017-12-27 15:17:19'),
+(2522, 'News', 'view', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 15:17:19'),
+(2523, 'Images', 'search.png', NULL, '2017-12-27 15:17:20'),
+(2524, 'Users', 'logout', NULL, '2017-12-27 15:18:13'),
+(2525, 'Users', 'login', NULL, '2017-12-27 15:18:13'),
+(2526, 'Images', '3.jpg', NULL, '2017-12-27 15:18:14'),
+(2527, 'Images', '6.png', NULL, '2017-12-27 15:18:14'),
+(2528, 'Images', 'user.png', NULL, '2017-12-27 15:18:14'),
+(2529, 'Pages', 'display', 'home', '2017-12-27 15:18:16'),
+(2530, 'Users', 'login', NULL, '2017-12-27 15:18:17'),
+(2531, 'Images', 'user.png', NULL, '2017-12-27 15:18:17'),
+(2532, 'Images', '6.png', NULL, '2017-12-27 15:18:17'),
+(2533, 'Images', '3.jpg', NULL, '2017-12-27 15:18:17'),
+(2534, 'Users', 'login', NULL, '2017-12-27 15:18:35'),
+(2535, 'Images', '3.jpg', NULL, '2017-12-27 15:18:36'),
+(2536, 'Images', 'user.png', NULL, '2017-12-27 15:18:36'),
+(2537, 'Images', '6.png', NULL, '2017-12-27 15:18:36'),
+(2538, 'Pages', 'display', 'home', '2017-12-27 15:18:38'),
+(2539, 'Pages', 'display', 'adminHome', '2017-12-27 15:18:43'),
+(2540, 'Pages', 'display', '1.png', '2017-12-27 15:18:43'),
+(2541, 'Images', 'search.png', NULL, '2017-12-27 15:18:44'),
+(2542, 'Pages', 'adminHome', NULL, '2017-12-27 15:20:59'),
+(2543, 'Users', 'login', NULL, '2017-12-27 15:21:00'),
+(2544, 'Images', '6.png', NULL, '2017-12-27 15:21:00'),
+(2545, 'Images', '3.jpg', NULL, '2017-12-27 15:21:00'),
+(2546, 'Images', 'user.png', NULL, '2017-12-27 15:21:01'),
+(2547, 'Users', 'login', NULL, '2017-12-27 15:21:04'),
+(2548, 'Images', '3.jpg', NULL, '2017-12-27 15:21:04'),
+(2549, 'Images', 'user.png', NULL, '2017-12-27 15:21:04'),
+(2550, 'Images', '6.png', NULL, '2017-12-27 15:21:04'),
+(2551, 'Pages', 'home', NULL, '2017-12-27 15:21:06'),
+(2552, 'Users', 'login', NULL, '2017-12-27 15:21:07'),
+(2553, 'Images', '6.png', NULL, '2017-12-27 15:21:07'),
+(2554, 'Images', '3.jpg', NULL, '2017-12-27 15:21:07'),
+(2555, 'Images', 'user.png', NULL, '2017-12-27 15:21:08'),
+(2556, 'Pages', 'home', NULL, '2017-12-27 15:21:15'),
+(2557, 'News', 'view', '3', '2017-12-27 15:22:22'),
+(2558, 'News', 'view', '1.png', '2017-12-27 15:22:22'),
+(2559, 'Images', 'search.png', NULL, '2017-12-27 15:22:23'),
+(2560, 'News', 'view', '3', '2017-12-27 15:22:46'),
+(2561, 'News', 'view', 'logo_sommg.png', '2017-12-27 15:22:47'),
+(2562, 'News', 'view', 'index.php', '2017-12-27 15:23:28'),
+(2563, 'News', 'view', 'index.php', '2017-12-27 15:23:31'),
+(2564, 'Pages', 'home', NULL, '2017-12-27 15:23:33'),
+(2565, 'Pages', 'home', NULL, '2017-12-27 15:24:59'),
+(2566, 'News', 'view', '3', '2017-12-27 15:29:43'),
+(2567, 'News', 'view', 'logo_sommg.png', '2017-12-27 15:29:44'),
+(2568, 'News', 'view', '3', '2017-12-27 15:30:42'),
+(2569, 'News', 'view', 'logo_sommg.png', '2017-12-27 15:30:43'),
+(2570, 'News', 'view', '3', '2017-12-27 15:32:53'),
+(2571, 'News', 'index', NULL, '2017-12-27 15:32:53'),
+(2572, 'News', 'view', 'logo_sommg.png', '2017-12-27 15:32:54'),
+(2573, 'Users', 'login', NULL, '2017-12-27 15:32:54'),
+(2574, 'News', 'view', '3', '2017-12-27 15:33:21'),
+(2575, 'News', 'view', 'logo_sommg.png', '2017-12-27 15:33:22'),
+(2576, 'Pages', 'home', NULL, '2017-12-27 15:40:31'),
+(2577, 'Pages', 'home', NULL, '2017-12-27 15:43:39'),
+(2578, 'Pages', 'home', NULL, '2017-12-27 15:43:50'),
+(2579, 'Pages', 'home', NULL, '2017-12-27 15:44:05'),
+(2580, 'Pages', 'home', NULL, '2017-12-27 15:44:23'),
+(2581, 'Pages', 'home', NULL, '2017-12-27 15:44:33'),
+(2582, 'Pages', 'home', NULL, '2017-12-27 15:48:56'),
+(2583, 'Pages', 'home', NULL, '2017-12-27 15:49:41'),
+(2584, 'Pages', 'home', NULL, '2017-12-27 15:49:48'),
+(2585, 'Pages', 'home', NULL, '2017-12-27 15:50:08'),
+(2586, 'Pages', 'home', NULL, '2017-12-27 15:50:18'),
+(2587, 'Pages', 'home', NULL, '2017-12-27 15:50:33'),
+(2588, 'Pages', 'home', NULL, '2017-12-27 15:51:26'),
+(2589, 'Pages', 'home', NULL, '2017-12-27 15:52:15'),
+(2590, 'Pages', 'home', NULL, '2017-12-27 15:52:32'),
+(2591, 'Pages', 'home', NULL, '2017-12-27 15:52:35'),
+(2592, 'Pages', 'home', NULL, '2017-12-27 15:52:39'),
+(2593, 'Pages', 'home', NULL, '2017-12-27 15:52:48'),
+(2594, 'Pages', 'home', NULL, '2017-12-27 15:53:18'),
+(2595, 'Pages', 'home', NULL, '2017-12-27 15:53:27'),
+(2596, 'Pages', 'home', NULL, '2017-12-27 15:53:42'),
+(2597, 'Pages', 'home', NULL, '2017-12-27 15:54:23'),
+(2598, 'Pages', 'home', NULL, '2017-12-27 15:54:28'),
+(2599, 'Pages', 'home', NULL, '2017-12-27 15:56:53'),
+(2600, 'Pages', 'home', NULL, '2017-12-27 15:57:18'),
+(2601, 'Pages', 'home', NULL, '2017-12-27 15:59:02'),
+(2602, 'Pages', 'home', NULL, '2017-12-27 15:59:09'),
+(2603, 'Pages', 'home', NULL, '2017-12-27 15:59:19'),
+(2604, 'Pages', 'home', NULL, '2017-12-27 15:59:44'),
+(2605, 'Pages', 'home', NULL, '2017-12-27 16:01:25'),
+(2606, 'Pages', 'home', NULL, '2017-12-27 16:02:23'),
+(2607, 'Pages', 'home', NULL, '2017-12-27 16:02:42'),
+(2608, 'Pages', 'home', NULL, '2017-12-27 16:04:04'),
+(2609, 'Pages', 'home', NULL, '2017-12-27 16:04:15'),
+(2610, 'Pages', 'home', NULL, '2017-12-27 16:04:23'),
+(2611, 'Pages', 'home', NULL, '2017-12-27 16:04:31'),
+(2612, 'Pages', 'home', NULL, '2017-12-27 16:04:34'),
+(2613, 'Pages', 'home', NULL, '2017-12-27 16:04:47'),
+(2614, 'Pages', 'home', NULL, '2017-12-27 16:04:54'),
+(2615, 'Pages', 'home', NULL, '2017-12-27 16:05:03'),
+(2616, 'Pages', 'home', NULL, '2017-12-27 16:05:54'),
+(2617, 'Pages', 'home', NULL, '2017-12-27 16:07:44'),
+(2618, 'Pages', 'home', NULL, '2017-12-27 16:07:48'),
+(2619, 'Pages', 'home', NULL, '2017-12-27 16:09:48'),
+(2620, 'Pages', 'home', NULL, '2017-12-27 16:10:34'),
+(2621, 'Pages', 'home', NULL, '2017-12-27 16:10:50'),
+(2622, 'Pages', 'home', NULL, '2017-12-27 16:11:17'),
+(2623, 'Pages', 'home', NULL, '2017-12-27 16:11:55'),
+(2624, 'Pages', 'home', NULL, '2017-12-27 16:12:50'),
+(2625, 'Pages', 'home', NULL, '2017-12-27 16:13:55'),
+(2626, 'Pages', 'home', NULL, '2017-12-27 16:14:11'),
+(2627, 'Pages', 'home', NULL, '2017-12-27 16:15:14'),
+(2628, 'Pages', 'home', NULL, '2017-12-27 16:16:23'),
+(2629, 'Galleries', 'view', '9', '2017-12-27 16:16:27'),
+(2630, 'Galleries', 'view', 'logo_sommg.png', '2017-12-27 16:16:28'),
+(2631, 'Pages', 'home', NULL, '2017-12-27 16:17:27'),
+(2632, 'Pages', 'home', NULL, '2017-12-27 16:17:29'),
+(2633, 'News', 'index', NULL, '2017-12-27 16:18:42'),
+(2634, 'Users', 'login', NULL, '2017-12-27 16:18:42'),
+(2635, 'Images', '3.jpg', NULL, '2017-12-27 16:18:43'),
+(2636, 'Images', '6.png', NULL, '2017-12-27 16:18:43'),
+(2637, 'Images', 'user.png', NULL, '2017-12-27 16:18:44'),
+(2638, 'Users', 'login', NULL, '2017-12-27 16:18:46'),
+(2639, 'News', 'index', NULL, '2017-12-27 16:18:46'),
+(2640, 'News', 'images', '1.png', '2017-12-27 16:18:47'),
+(2641, 'News', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:18:47'),
+(2642, 'Images', 'search.png', NULL, '2017-12-27 16:18:47'),
+(2643, 'News', 'delete', '2', '2017-12-27 16:18:50'),
+(2644, 'News', 'index', NULL, '2017-12-27 16:18:50'),
+(2645, 'Images', '1.png', NULL, '2017-12-27 16:18:50'),
+(2646, 'Images', 'search.png', NULL, '2017-12-27 16:18:51'),
+(2647, 'News', 'delete', '3', '2017-12-27 16:18:53'),
+(2648, 'News', 'index', NULL, '2017-12-27 16:18:53'),
+(2649, 'Images', '1.png', NULL, '2017-12-27 16:18:53'),
+(2650, 'Images', 'search.png', NULL, '2017-12-27 16:18:54'),
+(2651, 'News', 'add', NULL, '2017-12-27 16:18:56'),
+(2652, 'News', 'images', '1.png', '2017-12-27 16:18:56'),
+(2653, 'News', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:18:57'),
+(2654, 'Images', 'search.png', NULL, '2017-12-27 16:18:57'),
+(2655, 'News', 'add', NULL, '2017-12-27 16:19:11'),
+(2656, 'News', 'index', NULL, '2017-12-27 16:19:12'),
+(2657, 'Images', '1.png', NULL, '2017-12-27 16:19:13'),
+(2658, 'Images', 'search.png', NULL, '2017-12-27 16:19:13'),
+(2659, 'News', 'index', NULL, '2017-12-27 16:20:25'),
+(2660, 'Images', '1.png', NULL, '2017-12-27 16:20:25'),
+(2661, 'Images', 'search.png', NULL, '2017-12-27 16:20:26'),
+(2662, 'News', 'index', NULL, '2017-12-27 16:21:19'),
+(2663, 'Images', '1.png', NULL, '2017-12-27 16:21:19'),
+(2664, 'Images', 'search.png', NULL, '2017-12-27 16:21:20'),
+(2665, 'Pages', 'home', NULL, '2017-12-27 16:21:21'),
+(2666, 'Galleries', 'add', NULL, '2017-12-27 16:21:55'),
+(2667, 'Galleries', 'images', '1.png', '2017-12-27 16:21:56'),
+(2668, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:21:56'),
+(2669, 'Images', 'search.png', NULL, '2017-12-27 16:21:56'),
+(2670, 'Galleries', 'index', NULL, '2017-12-27 16:21:58'),
+(2671, 'Galleries', 'images', '1.png', '2017-12-27 16:21:58'),
+(2672, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:21:59'),
+(2673, 'Images', 'search.png', NULL, '2017-12-27 16:21:59'),
+(2674, 'Galleries', 'delete', '9', '2017-12-27 16:22:00'),
+(2675, 'Galleries', 'delete', '9', '2017-12-27 16:22:40'),
+(2676, 'Galleries', 'index', NULL, '2017-12-27 16:22:40'),
+(2677, 'Images', '1.png', NULL, '2017-12-27 16:22:40'),
+(2678, 'Images', 'search.png', NULL, '2017-12-27 16:22:41'),
+(2679, 'Galleries', 'add', NULL, '2017-12-27 16:22:44'),
+(2680, 'Galleries', 'images', '1.png', '2017-12-27 16:22:45'),
+(2681, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:22:45'),
+(2682, 'Images', 'search.png', NULL, '2017-12-27 16:22:45'),
+(2683, 'Galleries', 'add', NULL, '2017-12-27 16:23:06'),
+(2684, 'Galleries', 'images', '1.png', '2017-12-27 16:23:06'),
+(2685, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:23:06'),
+(2686, 'Images', 'search.png', NULL, '2017-12-27 16:23:07'),
+(2687, 'Galleries', 'add', NULL, '2017-12-27 16:23:19'),
+(2688, 'Galleries', 'images', '1.png', '2017-12-27 16:23:20'),
+(2689, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:23:20'),
+(2690, 'Images', 'search.png', NULL, '2017-12-27 16:23:20'),
+(2691, 'Galleries', 'add', NULL, '2017-12-27 16:24:04'),
+(2692, 'Galleries', 'index', NULL, '2017-12-27 16:24:05'),
+(2693, 'Images', '1.png', NULL, '2017-12-27 16:24:05'),
+(2694, 'Images', 'search.png', NULL, '2017-12-27 16:24:05'),
+(2695, 'Galleries', 'view', '10', '2017-12-27 16:24:08'),
+(2696, 'Galleries', 'view', 'logo_sommg.png', '2017-12-27 16:24:08'),
+(2697, 'Galleries', 'index', NULL, '2017-12-27 16:24:18'),
+(2698, 'Images', '1.png', NULL, '2017-12-27 16:24:18'),
+(2699, 'Images', 'search.png', NULL, '2017-12-27 16:24:19'),
+(2700, 'Pages', 'home', NULL, '2017-12-27 16:24:27'),
+(2701, 'Pages', 'home', NULL, '2017-12-27 16:24:51'),
+(2702, 'Pages', 'home', NULL, '2017-12-27 16:25:03'),
+(2703, 'Galleries', 'view', '10', '2017-12-27 16:25:34'),
+(2704, 'Galleries', 'view', 'logo_sommg.png', '2017-12-27 16:25:34'),
+(2705, 'Pages', 'home', NULL, '2017-12-27 16:25:37'),
+(2706, 'Pages', 'home', NULL, '2017-12-27 16:28:02'),
+(2707, 'Pages', 'home', NULL, '2017-12-27 16:28:20'),
+(2708, 'Pages', 'home', NULL, '2017-12-27 16:28:41'),
+(2709, 'Pages', 'home', NULL, '2017-12-27 16:29:50'),
+(2710, 'Pages', 'home', NULL, '2017-12-27 16:30:05'),
+(2711, 'Pages', 'home', NULL, '2017-12-27 16:30:13'),
+(2712, 'Pages', 'home', NULL, '2017-12-27 16:30:19'),
+(2713, 'Pages', 'home', NULL, '2017-12-27 16:30:44'),
+(2714, 'Pages', 'home', NULL, '2017-12-27 16:31:05'),
+(2715, 'Pages', 'home', NULL, '2017-12-27 16:31:12'),
+(2716, 'Pages', 'home', NULL, '2017-12-27 16:31:26'),
+(2717, 'Pages', 'home', NULL, '2017-12-27 16:31:45'),
+(2718, 'Pages', 'home', NULL, '2017-12-27 16:32:31'),
+(2719, 'Pages', 'home', NULL, '2017-12-27 16:32:38'),
+(2720, 'Pages', 'home', NULL, '2017-12-27 16:32:42'),
+(2721, 'Pages', 'home', NULL, '2017-12-27 16:32:50'),
+(2722, 'Pages', 'home', NULL, '2017-12-27 16:32:54'),
+(2723, 'Pages', 'home', NULL, '2017-12-27 16:32:56'),
+(2724, 'Pages', 'home', NULL, '2017-12-27 16:32:56'),
+(2725, 'Pages', 'home', NULL, '2017-12-27 16:34:17'),
+(2726, 'Pages', 'home', NULL, '2017-12-27 16:34:49'),
+(2727, 'Pages', 'home', NULL, '2017-12-27 16:34:59'),
+(2728, 'Pages', 'home', NULL, '2017-12-27 16:36:36'),
+(2729, 'Galleries', 'index', NULL, '2017-12-27 16:36:41'),
+(2730, 'Images', '1.png', NULL, '2017-12-27 16:36:42'),
+(2731, 'Images', 'search.png', NULL, '2017-12-27 16:36:42'),
+(2732, 'Galleries', 'delete', '10', '2017-12-27 16:36:44'),
+(2733, 'Galleries', 'index', NULL, '2017-12-27 16:36:47'),
+(2734, 'Images', '1.png', NULL, '2017-12-27 16:36:47'),
+(2735, 'Images', 'search.png', NULL, '2017-12-27 16:36:47'),
+(2736, 'Galleries', 'index', NULL, '2017-12-27 16:36:48'),
+(2737, 'Images', '1.png', NULL, '2017-12-27 16:36:49'),
+(2738, 'Images', 'search.png', NULL, '2017-12-27 16:36:49'),
+(2739, 'Galleries', 'index', NULL, '2017-12-27 16:37:09'),
+(2740, 'Images', '1.png', NULL, '2017-12-27 16:37:09'),
+(2741, 'Images', 'search.png', NULL, '2017-12-27 16:37:10'),
+(2742, 'Galleries', 'delete', '10', '2017-12-27 16:37:11'),
+(2743, 'Galleries', 'index', NULL, '2017-12-27 16:38:46'),
+(2744, 'Galleries', 'images', '1.png', '2017-12-27 16:38:46'),
+(2745, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:38:46'),
+(2746, 'Images', 'search.png', NULL, '2017-12-27 16:38:47'),
+(2747, 'Galleries', 'index', NULL, '2017-12-27 16:38:47'),
+(2748, 'Galleries', 'images', '1.png', '2017-12-27 16:38:48'),
+(2749, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:38:48'),
+(2750, 'Images', 'search.png', NULL, '2017-12-27 16:38:48'),
+(2751, 'Galleries', 'delete', '10', '2017-12-27 16:38:50'),
+(2752, 'Galleries', 'index', NULL, '2017-12-27 16:38:50'),
+(2753, 'Images', '1.png', NULL, '2017-12-27 16:38:50'),
+(2754, 'Images', 'search.png', NULL, '2017-12-27 16:38:51'),
+(2755, 'Galleries', 'index', NULL, '2017-12-27 16:38:56'),
+(2756, 'Galleries', 'index', NULL, '2017-12-27 16:38:56'),
+(2757, 'Images', '1.png', NULL, '2017-12-27 16:38:56'),
+(2758, 'Images', 'search.png', NULL, '2017-12-27 16:38:57'),
+(2759, 'Galleries', 'index', NULL, '2017-12-27 16:40:00'),
+(2760, 'Images', '1.png', NULL, '2017-12-27 16:40:00'),
+(2761, 'Images', 'search.png', NULL, '2017-12-27 16:40:01'),
+(2762, 'Galleries', 'index', NULL, '2017-12-27 16:40:01'),
+(2763, 'Images', '1.png', NULL, '2017-12-27 16:40:02'),
+(2764, 'Galleries', 'index', NULL, '2017-12-27 16:40:02'),
+(2765, 'Images', 'search.png', NULL, '2017-12-27 16:40:02'),
+(2766, 'Images', '1.png', NULL, '2017-12-27 16:40:02'),
+(2767, 'Images', 'search.png', NULL, '2017-12-27 16:40:02'),
+(2768, 'Galleries', 'index', NULL, '2017-12-27 16:40:03'),
+(2769, 'Images', '1.png', NULL, '2017-12-27 16:40:03'),
+(2770, 'Images', 'search.png', NULL, '2017-12-27 16:40:03'),
+(2771, 'Galleries', 'index', NULL, '2017-12-27 16:40:21'),
+(2772, 'Images', '1.png', NULL, '2017-12-27 16:40:21'),
+(2773, 'Images', 'search.png', NULL, '2017-12-27 16:40:22'),
+(2774, 'Pages', 'home', NULL, '2017-12-27 16:40:23'),
+(2775, 'Galleries', 'index', NULL, '2017-12-27 16:40:25'),
+(2776, 'Images', '1.png', NULL, '2017-12-27 16:40:25'),
+(2777, 'Images', 'search.png', NULL, '2017-12-27 16:40:25'),
+(2778, 'Galleries', 'add', NULL, '2017-12-27 16:40:27'),
+(2779, 'Galleries', 'images', '1.png', '2017-12-27 16:40:27'),
+(2780, 'Images', 'search.png', NULL, '2017-12-27 16:40:27'),
+(2781, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:40:28'),
+(2782, 'Galleries', 'add', NULL, '2017-12-27 16:40:41'),
+(2783, 'Galleries', 'index', NULL, '2017-12-27 16:40:42'),
+(2784, 'Images', '1.png', NULL, '2017-12-27 16:40:42'),
+(2785, 'Images', 'search.png', NULL, '2017-12-27 16:40:42'),
+(2786, 'Galleries', 'delete', '11', '2017-12-27 16:40:54'),
+(2787, 'Galleries', 'index', NULL, '2017-12-27 16:40:54'),
+(2788, 'Images', '1.png', NULL, '2017-12-27 16:40:55'),
+(2789, 'Images', 'search.png', NULL, '2017-12-27 16:40:55'),
+(2790, 'News', 'add', NULL, '2017-12-27 16:41:12'),
+(2791, 'News', 'images', '1.png', '2017-12-27 16:41:13'),
+(2792, 'Images', 'search.png', NULL, '2017-12-27 16:41:13'),
+(2793, 'News', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:41:13'),
+(2794, 'Galleries', 'add', NULL, '2017-12-27 16:41:24'),
+(2795, 'Galleries', 'images', '1.png', '2017-12-27 16:41:24'),
+(2796, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:41:24'),
+(2797, 'Images', 'search.png', NULL, '2017-12-27 16:41:25'),
+(2798, 'Galleries', 'add', NULL, '2017-12-27 16:41:32'),
+(2799, 'Galleries', 'index', NULL, '2017-12-27 16:41:32'),
+(2800, 'Images', '1.png', NULL, '2017-12-27 16:41:33'),
+(2801, 'Images', 'search.png', NULL, '2017-12-27 16:41:33'),
+(2802, 'Pages', 'home', NULL, '2017-12-27 16:41:35'),
+(2803, 'Galleries', 'index', NULL, '2017-12-27 16:44:28'),
+(2804, 'Images', '1.png', NULL, '2017-12-27 16:44:28'),
+(2805, 'Images', 'search.png', NULL, '2017-12-27 16:44:29'),
+(2806, 'Galleries', 'index', NULL, '2017-12-27 16:44:48'),
+(2807, 'Images', '1.png', NULL, '2017-12-27 16:44:49'),
+(2808, 'Images', 'search.png', NULL, '2017-12-27 16:44:49'),
+(2809, 'Focuses', 'add', NULL, '2017-12-27 16:44:53'),
+(2810, 'Focuses', 'images', '1.png', '2017-12-27 16:44:53'),
+(2811, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:44:53'),
+(2812, 'Images', 'search.png', NULL, '2017-12-27 16:44:53'),
+(2813, 'Categories', 'add', NULL, '2017-12-27 16:45:06'),
+(2814, 'Categories', 'images', '1.png', '2017-12-27 16:45:07'),
+(2815, 'Categories', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:45:07'),
+(2816, 'Images', 'search.png', NULL, '2017-12-27 16:45:07'),
+(2817, 'Categories', 'add', NULL, '2017-12-27 16:45:10'),
+(2818, 'Categories', 'index', NULL, '2017-12-27 16:45:10'),
+(2819, 'Images', '1.png', NULL, '2017-12-27 16:45:11'),
+(2820, 'Images', 'search.png', NULL, '2017-12-27 16:45:11'),
+(2821, 'Categories', 'add', NULL, '2017-12-27 16:45:13'),
+(2822, 'Categories', 'images', '1.png', '2017-12-27 16:45:14'),
+(2823, 'Categories', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:45:14'),
+(2824, 'Images', 'search.png', NULL, '2017-12-27 16:45:14'),
+(2825, 'Categories', 'add', NULL, '2017-12-27 16:45:33'),
+(2826, 'Categories', 'index', NULL, '2017-12-27 16:45:33'),
+(2827, 'Images', '1.png', NULL, '2017-12-27 16:45:34'),
+(2828, 'Images', 'search.png', NULL, '2017-12-27 16:45:34'),
+(2829, 'Categories', 'add', NULL, '2017-12-27 16:45:37'),
+(2830, 'Categories', 'images', '1.png', '2017-12-27 16:45:37'),
+(2831, 'Images', 'search.png', NULL, '2017-12-27 16:45:37'),
+(2832, 'Categories', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:45:38'),
+(2833, 'Categories', 'index', NULL, '2017-12-27 16:45:39'),
+(2834, 'Images', '1.png', NULL, '2017-12-27 16:45:39'),
+(2835, 'Images', 'search.png', NULL, '2017-12-27 16:45:39'),
+(2836, 'Categories', 'add', NULL, '2017-12-27 16:45:39'),
+(2837, 'Categories', 'images', '1.png', '2017-12-27 16:45:40'),
+(2838, 'Categories', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:45:40'),
+(2839, 'Images', 'search.png', NULL, '2017-12-27 16:45:40'),
+(2840, 'Focuses', 'add', NULL, '2017-12-27 16:45:41'),
+(2841, 'Focuses', 'images', '1.png', '2017-12-27 16:45:41'),
+(2842, 'Images', 'search.png', NULL, '2017-12-27 16:45:41'),
+(2843, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:45:42'),
+(2844, 'Focuses', 'add', NULL, '2017-12-27 16:46:47'),
+(2845, 'Focuses', 'images', '1.png', '2017-12-27 16:46:48'),
+(2846, 'Images', 'search.png', NULL, '2017-12-27 16:46:48'),
+(2847, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:46:48'),
+(2848, 'Focuses', 'add', NULL, '2017-12-27 16:47:05'),
+(2849, 'Focuses', 'images', '1.png', '2017-12-27 16:47:06'),
+(2850, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:47:06'),
+(2851, 'Images', 'search.png', NULL, '2017-12-27 16:47:06'),
+(2852, 'Focuses', 'add', NULL, '2017-12-27 16:47:39'),
+(2853, 'Focuses', 'images', '1.png', '2017-12-27 16:47:39'),
+(2854, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:47:40'),
+(2855, 'Images', 'search.png', NULL, '2017-12-27 16:47:40'),
+(2856, 'Focuses', 'add', NULL, '2017-12-27 16:48:03'),
+(2857, 'Focuses', 'images', '1.png', '2017-12-27 16:48:04'),
+(2858, 'Images', 'search.png', NULL, '2017-12-27 16:48:04'),
+(2859, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:48:04'),
+(2860, 'Focuses', 'add', NULL, '2017-12-27 16:49:06'),
+(2861, 'Focuses', 'images', '1.png', '2017-12-27 16:49:07'),
+(2862, 'Images', 'search.png', NULL, '2017-12-27 16:49:07'),
+(2863, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:49:07'),
+(2864, 'Focuses', 'add', NULL, '2017-12-27 16:49:18'),
+(2865, 'Focuses', 'images', '1.png', '2017-12-27 16:49:18'),
+(2866, 'Images', 'search.png', NULL, '2017-12-27 16:49:18'),
+(2867, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:49:19'),
+(2868, 'Focuses', 'add', NULL, '2017-12-27 16:51:05'),
+(2869, 'Focuses', 'add', NULL, '2017-12-27 16:51:35'),
+(2870, 'Focuses', 'images', '1.png', '2017-12-27 16:51:36'),
+(2871, 'Images', 'search.png', NULL, '2017-12-27 16:51:36'),
+(2872, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:51:36'),
+(2873, 'Focuses', 'add', NULL, '2017-12-27 16:51:58'),
+(2874, 'Focuses', 'images', '1.png', '2017-12-27 16:51:58'),
+(2875, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:51:59'),
+(2876, 'Images', 'search.png', NULL, '2017-12-27 16:51:59'),
+(2877, 'Focuses', 'add', NULL, '2017-12-27 16:52:13'),
+(2878, 'Focuses', 'images', '1.png', '2017-12-27 16:52:14'),
+(2879, 'Images', 'search.png', NULL, '2017-12-27 16:52:15'),
+(2880, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:52:15'),
+(2881, 'Focuses', 'add', NULL, '2017-12-27 16:52:41'),
+(2882, 'Focuses', 'index', NULL, '2017-12-27 16:52:41'),
+(2883, 'Images', '1.png', NULL, '2017-12-27 16:52:42'),
+(2884, 'Images', 'search.png', NULL, '2017-12-27 16:52:42'),
+(2885, 'Focuses', 'index', NULL, '2017-12-27 16:53:08'),
+(2886, 'Images', '1.png', NULL, '2017-12-27 16:53:09'),
+(2887, 'Images', 'search.png', NULL, '2017-12-27 16:53:09'),
+(2888, 'Focuses', 'index', NULL, '2017-12-27 16:53:23'),
+(2889, 'Focuses', 'index', NULL, '2017-12-27 16:53:24'),
+(2890, 'Images', '1.png', NULL, '2017-12-27 16:53:24'),
+(2891, 'Images', 'search.png', NULL, '2017-12-27 16:53:25'),
+(2892, 'Focuses', 'index', NULL, '2017-12-27 16:53:30'),
+(2893, 'Images', '1.png', NULL, '2017-12-27 16:53:31'),
+(2894, 'Images', 'search.png', NULL, '2017-12-27 16:53:31'),
+(2895, 'Focuses', 'index', NULL, '2017-12-27 16:53:55'),
+(2896, 'Images', '1.png', NULL, '2017-12-27 16:53:55'),
+(2897, 'Images', 'search.png', NULL, '2017-12-27 16:53:56'),
+(2898, 'Focuses', 'index', NULL, '2017-12-27 16:54:04'),
+(2899, 'Images', '1.png', NULL, '2017-12-27 16:54:05'),
+(2900, 'Images', 'search.png', NULL, '2017-12-27 16:54:05'),
+(2901, 'Focuses', 'index', NULL, '2017-12-27 16:54:49'),
+(2902, 'Images', '1.png', NULL, '2017-12-27 16:54:50'),
+(2903, 'Images', 'search.png', NULL, '2017-12-27 16:54:50'),
+(2904, 'Focuses', 'index', NULL, '2017-12-27 16:56:10'),
+(2905, 'Images', '1.png', NULL, '2017-12-27 16:56:11'),
+(2906, 'Images', 'search.png', NULL, '2017-12-27 16:56:11'),
+(2907, 'Focuses', 'index', NULL, '2017-12-27 16:56:17'),
+(2908, 'Images', '1.png', NULL, '2017-12-27 16:56:17'),
+(2909, 'Images', 'search.png', NULL, '2017-12-27 16:56:18'),
+(2910, 'Focuses', 'view', '1', '2017-12-27 16:56:23'),
+(2911, 'Focuses', 'view', '1.png', '2017-12-27 16:56:24'),
+(2912, 'Focuses', 'view', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 16:56:24'),
+(2913, 'Images', 'search.png', NULL, '2017-12-27 16:56:24'),
+(2914, 'Focuses', 'index', NULL, '2017-12-27 16:56:26'),
+(2915, 'Images', '1.png', NULL, '2017-12-27 16:56:27'),
+(2916, 'Images', 'search.png', NULL, '2017-12-27 16:56:27'),
+(2917, 'Pages', 'home', NULL, '2017-12-27 16:56:31'),
+(2918, 'Pages', 'home', NULL, '2017-12-27 16:58:20'),
+(2919, 'Pages', 'home', NULL, '2017-12-27 16:58:32'),
+(2920, 'Pages', 'home', NULL, '2017-12-27 16:58:34'),
+(2921, 'Pages', 'home', NULL, '2017-12-27 16:58:47'),
+(2922, 'Pages', 'home', NULL, '2017-12-27 16:59:04'),
+(2923, 'Pages', 'home', NULL, '2017-12-27 16:59:31'),
+(2924, 'Pages', 'home', NULL, '2017-12-27 17:01:08'),
+(2925, 'Pages', 'home', NULL, '2017-12-27 17:01:27'),
+(2926, 'Pages', 'home', NULL, '2017-12-27 17:01:47'),
+(2927, 'Pages', 'home', NULL, '2017-12-27 17:01:56'),
+(2928, 'Pages', 'home', NULL, '2017-12-27 17:02:48'),
+(2929, 'Focuses', 'add', NULL, '2017-12-27 17:03:04'),
+(2930, 'Focuses', 'images', '1.png', '2017-12-27 17:03:04'),
+(2931, 'Images', 'search.png', NULL, '2017-12-27 17:03:04'),
+(2932, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 17:03:05'),
+(2933, 'Focuses', 'add', NULL, '2017-12-27 17:03:11'),
+(2934, 'Focuses', 'index', NULL, '2017-12-27 17:03:11'),
+(2935, 'Focuses', 'index', NULL, '2017-12-27 17:03:49'),
+(2936, 'Focuses', 'index', NULL, '2017-12-27 17:03:52'),
+(2937, 'Focuses', 'add', NULL, '2017-12-27 17:04:56'),
+(2938, 'Focuses', 'images', '1.png', '2017-12-27 17:04:57'),
+(2939, 'Images', 'search.png', NULL, '2017-12-27 17:04:57'),
+(2940, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 17:04:57'),
+(2941, 'Focuses', 'index', NULL, '2017-12-27 17:04:59'),
+(2942, 'Focuses', 'images', '1.png', '2017-12-27 17:05:00'),
+(2943, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 17:05:00'),
+(2944, 'Images', 'search.png', NULL, '2017-12-27 17:05:00'),
+(2945, 'Focuses', 'add', NULL, '2017-12-27 17:05:03'),
+(2946, 'Focuses', 'images', '1.png', '2017-12-27 17:05:03'),
+(2947, 'Focuses', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-27 17:05:03'),
+(2948, 'Images', 'search.png', NULL, '2017-12-27 17:05:03'),
+(2949, 'Focuses', 'add', NULL, '2017-12-27 17:05:13'),
+(2950, 'Focuses', 'index', NULL, '2017-12-27 17:05:14'),
+(2951, 'Images', '1.png', NULL, '2017-12-27 17:05:14'),
+(2952, 'Images', 'search.png', NULL, '2017-12-27 17:05:15'),
+(2953, 'Pages', 'home', NULL, '2017-12-27 17:05:18'),
+(2954, 'Pages', 'home', NULL, '2017-12-27 17:05:58'),
+(2955, 'Pages', 'home', NULL, '2017-12-27 17:06:22'),
+(2956, 'Pages', 'home', NULL, '2017-12-27 17:07:40'),
+(2957, 'Focuses', 'view', '3', '2017-12-27 17:07:44'),
+(2958, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:07:44'),
+(2959, 'Focuses', 'view', '3', '2017-12-27 17:07:59'),
+(2960, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:08:00'),
+(2961, 'Pages', 'home', NULL, '2017-12-27 17:08:00'),
+(2962, 'Focuses', 'view', '3', '2017-12-27 17:08:36'),
+(2963, 'Focuses', 'view', '3', '2017-12-27 17:08:44'),
+(2964, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:08:44'),
+(2965, 'Pages', 'home', NULL, '2017-12-27 17:08:45'),
+(2966, 'Focuses', 'view', '3', '2017-12-27 17:08:57'),
+(2967, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:08:58'),
+(2968, 'Focuses', 'view', '3', '2017-12-27 17:09:08'),
+(2969, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:09:08'),
+(2970, 'Focuses', 'view', '3', '2017-12-27 17:09:59'),
+(2971, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:10:00'),
+(2972, 'Pages', 'home', NULL, '2017-12-27 17:10:01');
 
 -- --------------------------------------------------------
 
@@ -2440,6 +3064,47 @@ INSERT INTO `albums` (`id`, `data`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `title` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `categories`
+--
+
+INSERT INTO `categories` (`id`, `title`) VALUES
+(1, 'Rebaixado'),
+(2, 'Som Automotivo');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `focuses`
+--
+
+CREATE TABLE `focuses` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `data` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `category_id` int(11) NOT NULL,
+  `detalhes` text NOT NULL,
+  `image_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `focuses`
+--
+
+INSERT INTO `focuses` (`id`, `nome`, `data`, `category_id`, `detalhes`, `image_id`) VALUES
+(3, 'Carro bonito', '2017-12-27 17:05:14', 1, 'de rebaixamento', 60);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `galleries`
 --
 
@@ -2456,7 +3121,7 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `image_id`, `data`, `title`, `text`) VALUES
-(9, 42, '2017-12-25 14:40:08', 'tituloo', 'textoo');
+(12, 55, '2017-12-27 16:41:32', 'kkkk', 'kkkkkkkkkkkkkkkkk');
 
 -- --------------------------------------------------------
 
@@ -2475,15 +3140,7 @@ CREATE TABLE `galleries_images` (
 --
 
 INSERT INTO `galleries_images` (`id`, `gallery_id`, `image_id`) VALUES
-(1, 5, 18),
-(2, 5, 19),
-(3, 6, 21),
-(4, 6, 22),
-(5, 7, 37),
-(6, 7, 38),
-(7, 7, 39),
-(8, 8, 41),
-(9, 9, 43);
+(16, 12, 56);
 
 -- --------------------------------------------------------
 
@@ -2523,14 +3180,10 @@ CREATE TABLE `images` (
 INSERT INTO `images` (`id`, `path`, `name`) VALUES
 (30, 'webroot\\img\\Images\\15142030021514203002', 'be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg'),
 (32, 'webroot\\img\\Images\\15142075621514207562', 'AABrXFUPRwHnF45wCkgE29W_sUbYEu0fqq9CErC5uJc.png'),
-(34, 'webroot\\img\\Images\\15142091081514209108', 'reactor.png'),
-(35, 'webroot\\img\\Images\\15142099231514209923', '98163959-816b-4345-8aa7-7ec38b2ff5aa.jpg'),
-(37, 'webroot\\img\\Images\\15142126301514212630', '98163959-816b-4345-8aa7-7ec38b2ff5aa.jpg'),
-(38, 'webroot\\img\\Images\\15142126301514212630', 'AABrXFUPRwHnF45wCkgE29W_sUbYEu0fqq9CErC5uJc.png'),
-(39, 'webroot\\img\\Images\\15142126301514212630', 'be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg'),
-(41, 'webroot\\img\\Images\\15142126851514212685', '855523_1.jpg'),
-(42, 'webroot\\img\\Images\\15142128081514212808', '855523_1.jpg'),
-(43, 'webroot\\img\\Images\\15142128081514212808', '98163959-816b-4345-8aa7-7ec38b2ff5aa.jpg');
+(44, 'webroot\\img\\Images\\15143915521514391552', 'AABrXFUPRwHnF45wCkgE29W_sUbYEu0fqq9CErC5uJc.png'),
+(55, 'webroot\\img\\Images\\15143928921514392892', '855523_1.jpg'),
+(56, 'webroot\\img\\Images\\15143928921514392892', '98163959-816b-4345-8aa7-7ec38b2ff5aa.jpg'),
+(60, 'webroot\\img\\Images\\15143943131514394313', 'loja-equipadora-ws--sound-loja-de-som-automotivo-loja-de-acessorios-automotivos-jardim-rochdale-osasco-2120-9484.jpg');
 
 -- --------------------------------------------------------
 
@@ -2551,8 +3204,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `text`, `image_id`, `data`) VALUES
-(2, 'ex react', 'reactor', 35, '2017-12-25 13:35:34'),
-(3, 'reac', 'reac', 34, '2017-12-25 13:38:28');
+(4, 'Nova noticia', 'Essa nova noticia é um teste que eu fiz com uma foto que gosto', 44, '2017-12-27 16:19:12');
 
 -- --------------------------------------------------------
 
@@ -2632,6 +3284,18 @@ ALTER TABLE `albums`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `focuses`
+--
+ALTER TABLE `focuses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `galleries`
 --
 ALTER TABLE `galleries`
@@ -2681,7 +3345,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accesses`
 --
 ALTER TABLE `accesses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2350;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2973;
 --
 -- AUTO_INCREMENT for table `ads`
 --
@@ -2698,15 +3362,25 @@ ALTER TABLE `agendas`
 ALTER TABLE `albums`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `focuses`
+--
+ALTER TABLE `focuses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `galleries_images`
 --
 ALTER TABLE `galleries_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `groups`
 --
@@ -2716,12 +3390,12 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `songs`
 --
