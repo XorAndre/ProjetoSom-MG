@@ -1,7 +1,7 @@
 				<div class="copyright">
 				  <div class="container">
 				    <div class="col-md-6">
-				      <p>© <?= date('Y');?> - Todos direitos reservados | Desenvolvimento: <?= $dev;?></p>
+				      <p>© <?= date('Y');?> - Todos direitos reservados | Desenvolvimento: <a href="http://webcreativedesign.com.br/"> WEB CREATIVE DESIGN</a></p>
 				    </div>
 				    <div class="col-md-6">
 				      <ul class="bottom_ul">        

@@ -12,7 +12,7 @@
 	<?= $this->fetch('css') ?>
 	<?= $this->fetch('script') ?>
 	<!--SEO-->
-	            <?= $this->Html->meta('icon') ?>
+	<?= $this->Html->meta('icon') ?>
 	<title>SomMG | Campeonato Brasileiro de som Automotivo</title>
 	<meta name="description" content="Som-MG o melhor site de evento automotivo do Brasil">
 	<meta name="robots" content="index, follow">

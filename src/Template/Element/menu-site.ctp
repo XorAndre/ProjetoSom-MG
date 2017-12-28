@@ -18,8 +18,8 @@
 			            <li><a href="#">AGENDA</a></li>
 			            <li><?= $this->Html->link('COBERTURAS', ['controller' => 'galleries', 'action' => 'index']) ?></li>
 			            <li><a href="#">MÚSICAS</a></li>
-			            <li><a href="#">VÍDEOS</a></li>
-			            <li><a href="#">MATÉRIAS</a></li>
+			            <li><?= $this->Html->link('VÍDEOS', ['controller' => 'videos', 'action' => 'index']) ?></li>
+			            <li><?= $this->Html->link('MATÉRIAS', ['controller' => 'news', 'action' => 'index']) ?></li>
 			            <li><a href="#">RANKING</a></li>
 			            <li><?= $this->Html->link('CONTATO', ['controller' => 'contacts', 'action' => 'add']) ?></li>
 			            <li><a href="?pagina=nossa-historia">CONHEÇA NOSSA HISTÓRIA</a></li>

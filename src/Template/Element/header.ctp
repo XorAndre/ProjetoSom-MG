@@ -126,7 +126,7 @@
                                 <ul>
                                     <li class="dropdown profile_details_drop">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                            <div class="profile_img">>
+                                            <div class="profile_img">
                                                 <span style="background:url(img/<?= $userImage['path'] ?>/thumbnail-<?= $userImage['name'] ?>) no-repeat center"> </span>
                                                 <div class="user-name">
                                                     <p><?= $this->request->session()->read("Auth.User.nome") ?>

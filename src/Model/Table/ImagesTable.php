@@ -77,7 +77,7 @@ class ImagesTable extends Table
 
                         // Use the Imagine library to DO THE THING
                     $size = new \Imagine\Image\Box(315, 230);
-                    $mode = \Imagine\Image\ImageInterface::THUMBNAIL_INSET;
+                    $mode = \Imagine\Image\ImageInterface::THUMBNAIL_OUTBOUND;
                     $imagine = new \Imagine\Gd\Imagine();
 
                         // Save that modified file to our temp file

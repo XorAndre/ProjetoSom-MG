@@ -21,9 +21,24 @@ class NewsController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['view']);
+        $this->Auth->allow(['view','index']);
     }
+
     public function index()
+    {
+        $this->viewBuilder()->setLayout('site');
+        $this->paginate = ['limit' => 9];
+        $news = $this->paginate($this->News);
+        $im = [];
+        foreach ($news as $key => $value) {
+            $im[] = $this->News->Images->preparePath($value['image_id']);         
+        }
+        $this->set(compact('news'));
+        $this->set(compact('im'));
+        $this->set('_serialize', ['news']);
+    }
+
+    public function adminIndex()
     {
         $news = $this->News->find('all');
         foreach ($news as $key => $value) {
@@ -68,7 +83,7 @@ class NewsController extends AppController
                 if ($this->News->save($news)) {
                     $this->Flash->success(__('The news has been saved.'));
 
-                    return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['action' => 'adminIndex']);
                 }
                 $this->Flash->error(__('The news could not be saved. Please, try again.'));
             }else

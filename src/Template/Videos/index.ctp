@@ -1,8 +1,8 @@
 <section class="container">
 	<article class="row">
-		<?php if (!empty($news)): ?>
+		<?php if (!empty($videos)): ?>
 			<div class="col-md-12">
-				<?php foreach ($news as $key => $value): ?>
+				<?php foreach ($videos as $key => $value): ?>
 					<figure class="snip1237">
 						<div class="image">
 							<?= $this->Html->image($im[$key]['path']. '/thumbnail-'. $im[$key]['name']) ?>

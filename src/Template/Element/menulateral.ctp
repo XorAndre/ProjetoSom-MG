@@ -12,14 +12,29 @@
             <li class="menu-list">
 
                 <a href="#"><i class="lnr lnr-pencil"></i>
-                <span>POSTAGENS</span></a>
+                <span>NOVA POSTAGEM</span></a>
                 <ul class="sub-menu-list">
                     <li><?= $this->Html->link("NOTICIAS", ['controller' => 'news','action' => 'add']) ?></li>
                     <li><?= $this->Html->link("GALERIA DE FOTOS", ['controller' => 'galleries','action' => 'add']) ?></li>
                     <li><?= $this->Html->link("DESTAQUES", ['controller' => 'focuses','action' => 'add']) ?></li>
-                    <li><?= $this->Html->link("MUSICAS", ['controller' => 'albums','action' => 'add']) ?></li>
+                    <li><?= $this->Html->link("MÚSICAS", ['controller' => 'albums','action' => 'add']) ?></li>
+                    <li><?= $this->Html->link("VÍDEOS", ['controller' => 'videos','action' => 'add']) ?></li>
                    
-                    <li><a href="">AGENDA</a></li>
+                    <li><a href="#">AGENDA</a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+
+                <a href="#"><i class="lnr lnr-list"></i>
+                <span>LISTAGENS</span></a>
+                <ul class="sub-menu-list">
+                    <li><?= $this->Html->link("NOTICIAS", ['controller' => 'news','action' => 'index']) ?></li>
+                    <li><?= $this->Html->link("GALERIA DE FOTOS", ['controller' => 'galleries','action' => 'index']) ?></li>
+                    <li><?= $this->Html->link("DESTAQUES", ['controller' => 'focuses','action' => 'index']) ?></li>
+                    <li><?= $this->Html->link("MUSICAS", ['controller' => 'albums','action' => 'index']) ?></li>
+                    <li><?= $this->Html->link("VÍDEOS", ['controller' => 'videos','action' => 'index']) ?></li>
+                   
+                    <li><a href="#">AGENDA</a></li>
                 </ul>
             </li>
             <li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>PUBLICIDADES</span></a>
@@ -34,7 +49,8 @@
                  <li><?= $this->Html->link("CADASTRAR", ['controller' => 'users','action' => 'add']) ?></li>
                 </ul>
             </li>                        
-            <li><a href="media.html"><i class="lnr lnr-select"></i> <span>SOM-MG RESPONDE</span></a></li>
+            <li>
+                <?= $this->Html->link("<i class=\"lnr lnr-select\"></i> SOM-MG RESPONDE", ['controller' => 'contacts','action' => 'index'], ['escape' => false]) ?>
             <li class="menu-list"><a href="#"><i class="lnr lnr-book"></i><span>CONFIGURAÇÃO</span></a>
                 <ul class="sub-menu-list">
                     <li><a href="">BACKUP</a> </li>

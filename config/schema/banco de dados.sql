@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 27-Dez-2017 às 18:46
+-- Generation Time: 28-Dez-2017 às 15:17
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -3013,7 +3013,360 @@ INSERT INTO `accesses` (`id`, `controller`, `action`, `param`, `data`) VALUES
 (2969, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:09:08'),
 (2970, 'Focuses', 'view', '3', '2017-12-27 17:09:59'),
 (2971, 'Focuses', 'view', 'logo_sommg.png', '2017-12-27 17:10:00'),
-(2972, 'Pages', 'home', NULL, '2017-12-27 17:10:01');
+(2972, 'Pages', 'home', NULL, '2017-12-27 17:10:01'),
+(2973, 'Pages', 'home', NULL, '2017-12-28 12:25:44'),
+(2974, 'Pages', 'home', NULL, '2017-12-28 12:26:12'),
+(2975, 'Contacts', 'add', NULL, '2017-12-28 12:26:15'),
+(2976, 'Contacts', 'images', '1.png', '2017-12-28 12:26:15'),
+(2977, 'Images', 'search.png', NULL, '2017-12-28 12:26:16'),
+(2978, 'Contacts', 'add', NULL, '2017-12-28 12:26:41'),
+(2979, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:26:41'),
+(2980, 'Contacts', 'add', NULL, '2017-12-28 12:28:54'),
+(2981, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:28:54'),
+(2982, 'Contacts', 'add', NULL, '2017-12-28 12:29:03'),
+(2983, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:29:03'),
+(2984, 'Contacts', 'add', NULL, '2017-12-28 12:29:08'),
+(2985, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:29:09'),
+(2986, 'Contacts', 'add', NULL, '2017-12-28 12:30:27'),
+(2987, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:30:27'),
+(2988, 'Contacts', 'add', NULL, '2017-12-28 12:30:39'),
+(2989, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:30:39'),
+(2990, 'Users', 'index', NULL, '2017-12-28 12:36:27'),
+(2991, 'Users', 'login', NULL, '2017-12-28 12:36:27'),
+(2992, 'Images', '6.png', NULL, '2017-12-28 12:36:28'),
+(2993, 'Images', 'user.png', NULL, '2017-12-28 12:36:28'),
+(2994, 'Images', '3.jpg', NULL, '2017-12-28 12:36:28'),
+(2995, 'Users', 'login', NULL, '2017-12-28 12:36:31'),
+(2996, 'Users', 'index', NULL, '2017-12-28 12:36:31'),
+(2997, 'Images', '1.png', NULL, '2017-12-28 12:36:32'),
+(2998, 'Images', 'search.png', NULL, '2017-12-28 12:36:32'),
+(2999, 'Pages', 'home', NULL, '2017-12-28 12:38:15'),
+(3000, 'Contacts', 'add', NULL, '2017-12-28 12:38:18'),
+(3001, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:38:18'),
+(3002, 'Contacts', 'add', NULL, '2017-12-28 12:38:54'),
+(3003, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:38:54'),
+(3004, 'Contacts', 'add', NULL, '2017-12-28 12:39:24'),
+(3005, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:39:25'),
+(3006, 'Contacts', 'add', NULL, '2017-12-28 12:39:30'),
+(3007, 'Pages', 'home', NULL, '2017-12-28 12:39:30'),
+(3008, 'Contacts', 'add', NULL, '2017-12-28 12:39:37'),
+(3009, 'Contacts', 'img', 'logo_sommg.png', '2017-12-28 12:39:37'),
+(3010, 'Pages', 'home', NULL, '2017-12-28 12:39:39'),
+(3011, 'Pages', 'home', NULL, '2017-12-28 12:45:15'),
+(3012, 'Pages', 'home', NULL, '2017-12-28 12:46:47'),
+(3013, 'Galleries', 'index', NULL, '2017-12-28 12:46:54'),
+(3014, 'Galleries', 'index', NULL, '2017-12-28 12:48:28'),
+(3015, 'Galleries', 'index', NULL, '2017-12-28 12:48:53'),
+(3016, 'Galleries', 'index', NULL, '2017-12-28 12:50:31'),
+(3017, 'Galleries', 'index', NULL, '2017-12-28 12:50:44'),
+(3018, 'Galleries', 'index', NULL, '2017-12-28 12:50:52'),
+(3019, 'Galleries', 'index', NULL, '2017-12-28 12:51:00'),
+(3020, 'Galleries', 'index', NULL, '2017-12-28 12:51:15'),
+(3021, 'Galleries', 'index', NULL, '2017-12-28 12:51:26'),
+(3022, 'Galleries', 'index', NULL, '2017-12-28 12:51:45'),
+(3023, 'Galleries', 'index', NULL, '2017-12-28 12:52:35'),
+(3024, 'Galleries', 'index', NULL, '2017-12-28 12:53:13'),
+(3025, 'Galleries', 'index', NULL, '2017-12-28 12:53:25'),
+(3026, 'Galleries', 'index', NULL, '2017-12-28 12:53:38'),
+(3027, 'Galleries', 'index', NULL, '2017-12-28 12:53:49'),
+(3028, 'Pages', 'home', NULL, '2017-12-28 12:54:03'),
+(3029, 'Pages', 'home', NULL, '2017-12-28 12:54:25'),
+(3030, 'Galleries', 'index', NULL, '2017-12-28 12:54:27'),
+(3031, 'Galleries', 'view', '12', '2017-12-28 12:59:09'),
+(3032, 'Galleries', 'view', 'logo_sommg.png', '2017-12-28 12:59:09'),
+(3033, 'Galleries', 'index', NULL, '2017-12-28 12:59:11'),
+(3034, 'Galleries', 'index', NULL, '2017-12-28 13:02:09'),
+(3035, 'Galleries', 'index', NULL, '2017-12-28 13:02:38'),
+(3036, 'Galleries', 'add', NULL, '2017-12-28 13:04:21'),
+(3037, 'Galleries', 'images', '1.png', '2017-12-28 13:04:21'),
+(3038, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:04:22'),
+(3039, 'Images', 'search.png', NULL, '2017-12-28 13:04:22'),
+(3040, 'Galleries', 'add', NULL, '2017-12-28 13:04:50'),
+(3041, 'Galleries', 'index', NULL, '2017-12-28 13:04:50'),
+(3042, 'Galleries', 'add', NULL, '2017-12-28 13:05:04'),
+(3043, 'Galleries', 'images', '1.png', '2017-12-28 13:05:05'),
+(3044, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:05:05'),
+(3045, 'Images', 'search.png', NULL, '2017-12-28 13:05:05'),
+(3046, 'Galleries', 'add', NULL, '2017-12-28 13:05:12'),
+(3047, 'Galleries', 'adminIndex', NULL, '2017-12-28 13:05:13'),
+(3048, 'Galleries', 'images', '1.png', '2017-12-28 13:05:13'),
+(3049, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:05:13'),
+(3050, 'Images', 'search.png', NULL, '2017-12-28 13:05:14'),
+(3051, 'Pages', 'home', NULL, '2017-12-28 13:05:16'),
+(3052, 'Galleries', 'index', NULL, '2017-12-28 13:05:19'),
+(3053, 'Galleries', 'index', NULL, '2017-12-28 13:05:28'),
+(3054, 'Galleries', 'index', NULL, '2017-12-28 13:06:08'),
+(3055, 'Galleries', 'index', NULL, '2017-12-28 13:06:19'),
+(3056, 'Galleries', 'index', NULL, '2017-12-28 13:08:42'),
+(3057, 'Galleries', 'index', NULL, '2017-12-28 13:08:48'),
+(3058, 'News', 'index', NULL, '2017-12-28 13:08:50'),
+(3059, 'News', 'index', NULL, '2017-12-28 13:09:21'),
+(3060, 'News', 'index', NULL, '2017-12-28 13:09:43'),
+(3061, 'News', 'index', NULL, '2017-12-28 13:09:56'),
+(3062, 'News', 'index', NULL, '2017-12-28 13:10:11'),
+(3063, 'News', 'index', NULL, '2017-12-28 13:10:17'),
+(3064, 'News', 'index', NULL, '2017-12-28 13:10:36'),
+(3065, 'News', 'add', NULL, '2017-12-28 13:10:44'),
+(3066, 'News', 'images', '1.png', '2017-12-28 13:10:44'),
+(3067, 'News', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:10:45'),
+(3068, 'Images', 'search.png', NULL, '2017-12-28 13:10:45'),
+(3069, 'News', 'add', NULL, '2017-12-28 13:10:50'),
+(3070, 'News', 'index', NULL, '2017-12-28 13:10:51'),
+(3071, 'News', 'index', NULL, '2017-12-28 13:14:13'),
+(3072, 'Pages', 'home', NULL, '2017-12-28 13:14:17'),
+(3073, 'Galleries', 'add', NULL, '2017-12-28 13:14:26'),
+(3074, 'Galleries', 'images', '1.png', '2017-12-28 13:14:26'),
+(3075, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:14:26'),
+(3076, 'Images', 'search.png', NULL, '2017-12-28 13:14:27'),
+(3077, 'Galleries', 'add', NULL, '2017-12-28 13:14:39'),
+(3078, 'Galleries', 'adminIndex', NULL, '2017-12-28 13:14:40'),
+(3079, 'Galleries', 'images', '1.png', '2017-12-28 13:14:40'),
+(3080, 'Galleries', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:14:40'),
+(3081, 'Images', 'search.png', NULL, '2017-12-28 13:14:41'),
+(3082, 'Pages', 'home', NULL, '2017-12-28 13:14:42'),
+(3083, 'News', 'add', NULL, '2017-12-28 13:23:08'),
+(3084, 'News', 'images', '1.png', '2017-12-28 13:23:09'),
+(3085, 'Images', 'search.png', NULL, '2017-12-28 13:23:09'),
+(3086, 'News', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:23:09'),
+(3087, 'News', 'add', NULL, '2017-12-28 13:23:17'),
+(3088, 'News', 'adminIndex', NULL, '2017-12-28 13:23:18'),
+(3089, 'News', 'images', '1.png', '2017-12-28 13:23:18'),
+(3090, 'News', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:23:18'),
+(3091, 'Images', 'search.png', NULL, '2017-12-28 13:23:18'),
+(3092, 'Pages', 'home', NULL, '2017-12-28 13:23:22'),
+(3093, 'Pages', 'home', NULL, '2017-12-28 13:24:14'),
+(3094, 'Pages', 'home', NULL, '2017-12-28 13:24:17'),
+(3095, 'Pages', 'home', NULL, '2017-12-28 13:24:31'),
+(3096, 'Pages', 'home', NULL, '2017-12-28 13:24:33'),
+(3097, 'Pages', 'home', NULL, '2017-12-28 13:24:56'),
+(3098, 'Galleries', 'index', NULL, '2017-12-28 13:26:30'),
+(3099, 'News', 'index', NULL, '2017-12-28 13:26:53'),
+(3100, 'News', 'index', NULL, '2017-12-28 13:27:11'),
+(3101, 'News', 'index', NULL, '2017-12-28 13:27:31'),
+(3102, 'News', 'index', NULL, '2017-12-28 13:27:33'),
+(3103, 'News', 'index', NULL, '2017-12-28 13:28:39'),
+(3104, 'News', 'index', NULL, '2017-12-28 13:28:41'),
+(3105, 'News', 'index', NULL, '2017-12-28 13:29:07'),
+(3106, 'Pages', 'home', NULL, '2017-12-28 13:29:54'),
+(3107, 'Pages', 'home', NULL, '2017-12-28 13:31:16'),
+(3108, 'Users', 'index', NULL, '2017-12-28 13:34:02'),
+(3109, 'Users', 'images', '1.png', '2017-12-28 13:34:02'),
+(3110, 'Images', 'search.png', NULL, '2017-12-28 13:34:03'),
+(3111, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:34:03'),
+(3112, 'Users', 'index', NULL, '2017-12-28 13:34:58'),
+(3113, 'Users', 'images', '1.png', '2017-12-28 13:34:59'),
+(3114, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:34:59'),
+(3115, 'Images', 'search.png', NULL, '2017-12-28 13:34:59'),
+(3116, 'Users', 'view', '2', '2017-12-28 13:35:05'),
+(3117, 'Users', 'view', '1.png', '2017-12-28 13:35:05'),
+(3118, 'Images', 'search.png', NULL, '2017-12-28 13:35:06'),
+(3119, 'Users', 'view', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:35:06'),
+(3120, 'Pages', 'home', NULL, '2017-12-28 13:35:45'),
+(3121, 'Contacts', 'index', NULL, '2017-12-28 13:39:04'),
+(3122, 'Contacts', 'images', '1.png', '2017-12-28 13:39:05'),
+(3123, 'Contacts', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:39:05'),
+(3124, 'Images', 'search.png', NULL, '2017-12-28 13:39:05'),
+(3125, 'Contacts', 'index', NULL, '2017-12-28 13:39:16'),
+(3126, 'Contacts', 'images', '1.png', '2017-12-28 13:39:17'),
+(3127, 'Contacts', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:39:17'),
+(3128, 'Images', 'search.png', NULL, '2017-12-28 13:39:17'),
+(3129, 'Contacts', 'view', '1', '2017-12-28 13:39:19'),
+(3130, 'Contacts', 'view', '1.png', '2017-12-28 13:39:20'),
+(3131, 'Contacts', 'view', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:39:20'),
+(3132, 'Images', 'search.png', NULL, '2017-12-28 13:39:20'),
+(3133, 'Contacts', 'index', NULL, '2017-12-28 13:39:21'),
+(3134, 'Contacts', 'images', '1.png', '2017-12-28 13:39:22'),
+(3135, 'Images', 'search.png', NULL, '2017-12-28 13:39:22'),
+(3136, 'Contacts', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:39:22'),
+(3137, 'Contacts', 'index', NULL, '2017-12-28 13:39:39'),
+(3138, 'Contacts', 'images', '1.png', '2017-12-28 13:39:39'),
+(3139, 'Contacts', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:39:39'),
+(3140, 'Images', 'search.png', NULL, '2017-12-28 13:39:40'),
+(3141, 'Contacts', 'index', NULL, '2017-12-28 13:40:47'),
+(3142, 'Contacts', 'images', '1.png', '2017-12-28 13:40:48'),
+(3143, 'Contacts', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:40:48'),
+(3144, 'Images', 'search.png', NULL, '2017-12-28 13:40:48'),
+(3145, 'Contacts', 'view', '1', '2017-12-28 13:40:49'),
+(3146, 'Contacts', 'view', '1.png', '2017-12-28 13:40:50'),
+(3147, 'Contacts', 'view', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:40:50'),
+(3148, 'Images', 'search.png', NULL, '2017-12-28 13:40:50'),
+(3149, 'Contacts', 'view', '1', '2017-12-28 13:42:37'),
+(3150, 'Contacts', 'view', '1.png', '2017-12-28 13:42:37'),
+(3151, 'Images', 'search.png', NULL, '2017-12-28 13:42:38'),
+(3152, 'Contacts', 'view', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:42:38'),
+(3153, 'Contacts', 'index', NULL, '2017-12-28 13:42:40'),
+(3154, 'Images', '1.png', NULL, '2017-12-28 13:42:40'),
+(3155, 'Images', 'search.png', NULL, '2017-12-28 13:42:40'),
+(3156, 'Contacts', 'index', NULL, '2017-12-28 13:44:33'),
+(3157, 'Images', '1.png', NULL, '2017-12-28 13:44:33'),
+(3158, 'Images', 'search.png', NULL, '2017-12-28 13:44:33'),
+(3159, 'Contacts', 'index', NULL, '2017-12-28 13:45:04'),
+(3160, 'Images', '1.png', NULL, '2017-12-28 13:45:05'),
+(3161, 'Images', 'search.png', NULL, '2017-12-28 13:45:05'),
+(3162, 'Contacts', 'index', NULL, '2017-12-28 13:45:09'),
+(3163, 'Images', '1.png', NULL, '2017-12-28 13:45:09'),
+(3164, 'Images', 'search.png', NULL, '2017-12-28 13:45:10'),
+(3165, 'Contacts', 'index', NULL, '2017-12-28 13:45:21'),
+(3166, 'Images', '1.png', NULL, '2017-12-28 13:45:21'),
+(3167, 'Images', 'search.png', NULL, '2017-12-28 13:45:22'),
+(3168, 'Contacts', 'index', NULL, '2017-12-28 13:45:26'),
+(3169, 'Images', '1.png', NULL, '2017-12-28 13:45:26'),
+(3170, 'Images', 'search.png', NULL, '2017-12-28 13:45:26'),
+(3171, 'Albums', 'index', NULL, '2017-12-28 13:45:30'),
+(3172, 'Images', '1.png', NULL, '2017-12-28 13:45:30'),
+(3173, 'Images', 'search.png', NULL, '2017-12-28 13:45:30'),
+(3174, 'Focuses', 'index', NULL, '2017-12-28 13:45:32'),
+(3175, 'Images', '1.png', NULL, '2017-12-28 13:45:33'),
+(3176, 'Images', 'search.png', NULL, '2017-12-28 13:45:33'),
+(3177, 'Focuses', 'index', NULL, '2017-12-28 13:45:42'),
+(3178, 'Images', '1.png', NULL, '2017-12-28 13:45:43'),
+(3179, 'Images', 'search.png', NULL, '2017-12-28 13:45:43'),
+(3180, 'Focuses', 'index', NULL, '2017-12-28 13:45:49'),
+(3181, 'Images', '1.png', NULL, '2017-12-28 13:45:49'),
+(3182, 'Images', 'search.png', NULL, '2017-12-28 13:45:50'),
+(3183, 'Videos', 'add', NULL, '2017-12-28 13:51:30'),
+(3184, 'Videos', 'images', '1.png', '2017-12-28 13:51:30'),
+(3185, 'Images', 'search.png', NULL, '2017-12-28 13:51:31'),
+(3186, 'Videos', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:51:31'),
+(3187, 'Videos', 'add', NULL, '2017-12-28 13:51:37'),
+(3188, 'Videos', 'index', NULL, '2017-12-28 13:51:37'),
+(3189, 'Images', '1.png', NULL, '2017-12-28 13:51:38'),
+(3190, 'Images', 'search.png', NULL, '2017-12-28 13:51:38'),
+(3191, 'Videos', 'add', NULL, '2017-12-28 13:52:11'),
+(3192, 'Videos', 'images', '1.png', '2017-12-28 13:52:11'),
+(3193, 'Images', 'search.png', NULL, '2017-12-28 13:52:12'),
+(3194, 'Videos', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:52:12'),
+(3195, 'Videos', 'add', NULL, '2017-12-28 13:52:15'),
+(3196, 'Videos', 'images', '1.png', '2017-12-28 13:52:15'),
+(3197, 'Videos', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:52:16'),
+(3198, 'Images', 'search.png', NULL, '2017-12-28 13:52:16'),
+(3199, 'Videos', 'add', NULL, '2017-12-28 13:52:39'),
+(3200, 'Videos', 'images', '1.png', '2017-12-28 13:52:40'),
+(3201, 'Videos', 'images', '1.png', '2017-12-28 13:52:40'),
+(3202, 'Videos', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:52:40'),
+(3203, 'Images', 'search.png', NULL, '2017-12-28 13:52:41'),
+(3204, 'Videos', 'add', NULL, '2017-12-28 13:52:46'),
+(3205, 'Videos', 'images', '1.png', '2017-12-28 13:52:47'),
+(3206, 'Videos', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:52:47'),
+(3207, 'Images', 'search.png', NULL, '2017-12-28 13:52:47'),
+(3208, 'Videos', 'add', NULL, '2017-12-28 13:52:54'),
+(3209, 'Videos', 'index', NULL, '2017-12-28 13:52:54'),
+(3210, 'Images', '1.png', NULL, '2017-12-28 13:52:55'),
+(3211, 'Images', 'search.png', NULL, '2017-12-28 13:52:55'),
+(3212, 'Videos', 'add', NULL, '2017-12-28 13:53:17'),
+(3213, 'Videos', 'images', '1.png', '2017-12-28 13:53:18'),
+(3214, 'Images', 'search.png', NULL, '2017-12-28 13:53:18'),
+(3215, 'Videos', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:53:18'),
+(3216, 'Videos', 'add', NULL, '2017-12-28 13:53:31'),
+(3217, 'Videos', 'images', '1.png', '2017-12-28 13:53:31'),
+(3218, 'Videos', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:53:32'),
+(3219, 'Images', 'search.png', NULL, '2017-12-28 13:53:32'),
+(3220, 'Videos', 'index', NULL, '2017-12-28 13:55:07'),
+(3221, 'Images', '1.png', NULL, '2017-12-28 13:55:07'),
+(3222, 'Images', 'search.png', NULL, '2017-12-28 13:55:08'),
+(3223, 'Videos', 'edit', '2', '2017-12-28 13:55:10'),
+(3224, 'Videos', 'edit', '1.png', '2017-12-28 13:55:10'),
+(3225, 'Videos', 'edit', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:55:11'),
+(3226, 'Images', 'search.png', NULL, '2017-12-28 13:55:11'),
+(3227, 'Videos', 'edit', '2', '2017-12-28 13:55:14'),
+(3228, 'Videos', 'index', NULL, '2017-12-28 13:55:14'),
+(3229, 'Images', '1.png', NULL, '2017-12-28 13:55:14'),
+(3230, 'Images', 'search.png', NULL, '2017-12-28 13:55:15'),
+(3231, 'Videos', 'edit', '2', '2017-12-28 13:55:17'),
+(3232, 'Videos', 'edit', '1.png', '2017-12-28 13:55:17'),
+(3233, 'Videos', 'edit', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:55:17'),
+(3234, 'Images', 'search.png', NULL, '2017-12-28 13:55:18'),
+(3235, 'Videos', 'edit', '2', '2017-12-28 13:55:21'),
+(3236, 'Videos', 'index', NULL, '2017-12-28 13:55:21'),
+(3237, 'Images', '1.png', NULL, '2017-12-28 13:55:22'),
+(3238, 'Images', 'search.png', NULL, '2017-12-28 13:55:22'),
+(3239, 'Videos', 'index', NULL, '2017-12-28 13:57:33'),
+(3240, 'Images', '1.png', NULL, '2017-12-28 13:57:33'),
+(3241, 'Images', 'search.png', NULL, '2017-12-28 13:57:33'),
+(3242, 'Videos', 'index', NULL, '2017-12-28 13:58:01'),
+(3243, 'Images', '1.png', NULL, '2017-12-28 13:58:02'),
+(3244, 'Images', 'search.png', NULL, '2017-12-28 13:58:02'),
+(3245, 'Videos', 'index', NULL, '2017-12-28 13:58:16'),
+(3246, 'Images', '1.png', NULL, '2017-12-28 13:58:17'),
+(3247, 'Images', 'search.png', NULL, '2017-12-28 13:58:17'),
+(3248, 'Videos', 'edit', '2', '2017-12-28 13:58:23'),
+(3249, 'Videos', 'edit', '1.png', '2017-12-28 13:58:24'),
+(3250, 'Videos', 'edit', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:58:24'),
+(3251, 'Images', 'search.png', NULL, '2017-12-28 13:58:24'),
+(3252, 'Videos', 'edit', '2', '2017-12-28 13:58:31'),
+(3253, 'Videos', 'index', NULL, '2017-12-28 13:58:31'),
+(3254, 'Images', '1.png', NULL, '2017-12-28 13:58:32'),
+(3255, 'Images', 'search.png', NULL, '2017-12-28 13:58:32'),
+(3256, 'Videos', 'edit', '2', '2017-12-28 13:58:40'),
+(3257, 'Videos', 'edit', '1.png', '2017-12-28 13:58:40'),
+(3258, 'Videos', 'edit', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 13:58:41'),
+(3259, 'Images', 'search.png', NULL, '2017-12-28 13:58:41'),
+(3260, 'Videos', 'edit', '2', '2017-12-28 13:58:42'),
+(3261, 'Videos', 'index', NULL, '2017-12-28 13:58:42'),
+(3262, 'Images', '1.png', NULL, '2017-12-28 13:58:43'),
+(3263, 'Images', 'search.png', NULL, '2017-12-28 13:58:43'),
+(3264, 'Videos', 'index', NULL, '2017-12-28 13:59:24'),
+(3265, 'Images', '1.png', NULL, '2017-12-28 13:59:25'),
+(3266, 'Images', 'search.png', NULL, '2017-12-28 13:59:25'),
+(3267, 'Videos', 'index', NULL, '2017-12-28 13:59:48'),
+(3268, 'Images', '1.png', NULL, '2017-12-28 13:59:48'),
+(3269, 'Images', 'search.png', NULL, '2017-12-28 13:59:49'),
+(3270, 'Pages', 'home', NULL, '2017-12-28 14:01:43'),
+(3271, 'Videos', 'index', NULL, '2017-12-28 14:01:46'),
+(3272, 'Videos', 'index', NULL, '2017-12-28 14:02:02'),
+(3273, 'Users', 'add', NULL, '2017-12-28 14:03:09'),
+(3274, 'Users', 'images', '1.png', '2017-12-28 14:03:10'),
+(3275, 'Images', 'search.png', NULL, '2017-12-28 14:03:10'),
+(3276, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 14:03:10'),
+(3277, 'Users', 'add', NULL, '2017-12-28 14:03:43'),
+(3278, 'Users', 'images', '1.png', '2017-12-28 14:03:43'),
+(3279, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 14:03:43'),
+(3280, 'Images', 'search.png', NULL, '2017-12-28 14:03:44'),
+(3281, 'Users', 'add', NULL, '2017-12-28 14:04:07'),
+(3282, 'Users', 'images', '1.png', '2017-12-28 14:04:08'),
+(3283, 'Images', 'search.png', NULL, '2017-12-28 14:04:08'),
+(3284, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 14:04:08'),
+(3285, 'Users', 'add', NULL, '2017-12-28 14:05:04'),
+(3286, 'Users', 'add', NULL, '2017-12-28 14:05:17'),
+(3287, 'Users', 'images', '1.png', '2017-12-28 14:05:17'),
+(3288, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 14:05:18'),
+(3289, 'Images', 'search.png', NULL, '2017-12-28 14:05:18'),
+(3290, 'Users', 'add', NULL, '2017-12-28 14:05:33'),
+(3291, 'Users', 'images', '1.png', '2017-12-28 14:05:34'),
+(3292, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 14:05:34'),
+(3293, 'Images', 'search.png', NULL, '2017-12-28 14:05:34'),
+(3294, 'Users', 'add', NULL, '2017-12-28 14:06:33'),
+(3295, 'Users', 'images', '1.png', '2017-12-28 14:06:34'),
+(3296, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 14:06:34'),
+(3297, 'Images', 'search.png', NULL, '2017-12-28 14:06:34'),
+(3298, 'Users', 'add', NULL, '2017-12-28 14:06:49'),
+(3299, 'Users', 'images', '1.png', '2017-12-28 14:06:49'),
+(3300, 'Users', 'img', 'thumbnail-be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg', '2017-12-28 14:06:49'),
+(3301, 'Images', 'search.png', NULL, '2017-12-28 14:06:50'),
+(3302, 'Users', 'add', NULL, '2017-12-28 14:06:56'),
+(3303, 'Users', 'index', NULL, '2017-12-28 14:06:56'),
+(3304, 'Images', '1.png', NULL, '2017-12-28 14:06:57'),
+(3305, 'Images', 'search.png', NULL, '2017-12-28 14:06:57'),
+(3306, 'Users', 'logout', NULL, '2017-12-28 14:07:04'),
+(3307, 'Users', 'login', NULL, '2017-12-28 14:07:04'),
+(3308, 'Images', '6.png', NULL, '2017-12-28 14:07:05'),
+(3309, 'Images', 'user.png', NULL, '2017-12-28 14:07:05'),
+(3310, 'Images', '3.jpg', NULL, '2017-12-28 14:07:05'),
+(3311, 'Users', 'login', NULL, '2017-12-28 14:07:07'),
+(3312, 'Pages', 'home', NULL, '2017-12-28 14:07:07'),
+(3313, 'Pages', 'adminHome', NULL, '2017-12-28 14:07:18'),
+(3314, 'Pages', 'images', '1.png', '2017-12-28 14:07:19'),
+(3315, 'Images', 'search.png', NULL, '2017-12-28 14:07:19'),
+(3316, 'Pages', 'img', 'thumbnail-855523_1.jpg', '2017-12-28 14:07:19'),
+(3317, 'Pages', 'adminHome', NULL, '2017-12-28 14:07:50'),
+(3318, 'Pages', 'images', '1.png', '2017-12-28 14:07:50'),
+(3319, 'Images', 'search.png', NULL, '2017-12-28 14:07:50'),
+(3320, 'Pages', 'img', 'thumbnail-855523_1.jpg', '2017-12-28 14:07:51'),
+(3321, 'Pages', 'home', NULL, '2017-12-28 14:07:55'),
+(3322, 'Pages', 'adminHome', NULL, '2017-12-28 14:16:33'),
+(3323, 'Pages', 'images', '1.png', '2017-12-28 14:16:34'),
+(3324, 'Pages', 'img', 'thumbnail-855523_1.jpg', '2017-12-28 14:16:34'),
+(3325, 'Images', 'search.png', NULL, '2017-12-28 14:16:34');
 
 -- --------------------------------------------------------
 
@@ -3083,6 +3436,27 @@ INSERT INTO `categories` (`id`, `title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `assunto` varchar(200) NOT NULL,
+  `mensagem` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `nome`, `email`, `assunto`, `mensagem`) VALUES
+(1, 'asdfsadf', 'routmagno@gmail.com', 'asdfasdf', 'fsdfsadfsadfsadf');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `focuses`
 --
 
@@ -3121,7 +3495,10 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `image_id`, `data`, `title`, `text`) VALUES
-(12, 55, '2017-12-27 16:41:32', 'kkkk', 'kkkkkkkkkkkkkkkkk');
+(12, 55, '2017-12-27 16:41:32', 'kkkk', 'kkkkkkkkkkkkkkkkk'),
+(13, 61, '2017-12-28 13:04:50', 'titulo 2', 'a'),
+(14, 63, '2017-12-28 13:05:12', 'titulo 23', 'a'),
+(15, 66, '2017-12-28 13:14:39', 'te', 'asd');
 
 -- --------------------------------------------------------
 
@@ -3140,7 +3517,10 @@ CREATE TABLE `galleries_images` (
 --
 
 INSERT INTO `galleries_images` (`id`, `gallery_id`, `image_id`) VALUES
-(16, 12, 56);
+(16, 12, 56),
+(17, 13, 62),
+(18, 14, 64),
+(19, 15, 67);
 
 -- --------------------------------------------------------
 
@@ -3183,7 +3563,16 @@ INSERT INTO `images` (`id`, `path`, `name`) VALUES
 (44, 'webroot\\img\\Images\\15143915521514391552', 'AABrXFUPRwHnF45wCkgE29W_sUbYEu0fqq9CErC5uJc.png'),
 (55, 'webroot\\img\\Images\\15143928921514392892', '855523_1.jpg'),
 (56, 'webroot\\img\\Images\\15143928921514392892', '98163959-816b-4345-8aa7-7ec38b2ff5aa.jpg'),
-(60, 'webroot\\img\\Images\\15143943131514394313', 'loja-equipadora-ws--sound-loja-de-som-automotivo-loja-de-acessorios-automotivos-jardim-rochdale-osasco-2120-9484.jpg');
+(60, 'webroot\\img\\Images\\15143943131514394313', 'loja-equipadora-ws--sound-loja-de-som-automotivo-loja-de-acessorios-automotivos-jardim-rochdale-osasco-2120-9484.jpg'),
+(61, 'webroot\\img\\Images\\15144662901514466290', '855523_1.jpg'),
+(62, 'webroot\\img\\Images\\15144662901514466290', '98163959-816b-4345-8aa7-7ec38b2ff5aa.jpg'),
+(63, 'webroot\\img\\Images\\15144663121514466312', 'be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg'),
+(64, 'webroot\\img\\Images\\15144663121514466312', 'AABrXFUPRwHnF45wCkgE29W_sUbYEu0fqq9CErC5uJc.png'),
+(65, 'webroot\\img\\Images\\15144666501514466650', '98163959-816b-4345-8aa7-7ec38b2ff5aa.jpg'),
+(66, 'webroot\\img\\Images\\15144668791514466879', 'loja-equipadora-ws--sound-loja-de-som-automotivo-loja-de-acessorios-automotivos-jardim-rochdale-osasco-2120-9484.jpg'),
+(67, 'webroot\\img\\Images\\15144668791514466879', 'be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg'),
+(68, 'webroot\\img\\Images\\15144673971514467397', 'be6142aa-f24b-4c0d-a5a7-3e35da352a1f.jpg'),
+(69, 'webroot\\img\\Images\\15144700161514470016', '855523_1.jpg');
 
 -- --------------------------------------------------------
 
@@ -3204,7 +3593,9 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `text`, `image_id`, `data`) VALUES
-(4, 'Nova noticia', 'Essa nova noticia é um teste que eu fiz com uma foto que gosto', 44, '2017-12-27 16:19:12');
+(4, 'Nova noticia', 'Essa nova noticia é um teste que eu fiz com uma foto que gosto', 44, '2017-12-27 16:19:12'),
+(5, 'teste', 'asdas', 65, '2017-12-28 13:10:50'),
+(6, 'teste outbound', 'teste outbound', 68, '2017-12-28 13:23:17');
 
 -- --------------------------------------------------------
 
@@ -3253,7 +3644,28 @@ INSERT INTO `users` (`id`, `login`, `password`, `group_id`, `image_id`, `nome`, 
 (2, 'admin', '$2y$10$zRDTCWN5LeqPmhzV8VKcz.Yh7EuAIbZQuByuI0EMjgaqACTOiYuCq', 1, 30, 'Guilherme Magno', 'routmagno@gmail.com'),
 (3, 'rout', '$2y$10$GrZnPij/0QRNE4fZQUWz8.GXX/VzqRmhSLlzaJIaP1NpdItdwnQKK', 1, 30, 'Guilherme Magno Moura Cardoso', 'routmagno1@gmail.com'),
 (4, 'asdasd', '$2y$10$zQTm/guthi6xqRNCoK1mtuzIw535SCy26LKNlnPO5E6xCErgFy4Ii', 1, 30, 'asdasd', 'asdasda@asdasdsa.com'),
-(6, 'teste', '$2y$10$LTKSatW5orM8rtrGlARfq.chbkg4TRsR7q6ExYiMiHvC8JVr8klZC', 1, 32, '\'teste', 'routmagno523@gmail.com');
+(6, 'teste', '$2y$10$LTKSatW5orM8rtrGlARfq.chbkg4TRsR7q6ExYiMiHvC8JVr8klZC', 1, 32, '\'teste', 'routmagno523@gmail.com'),
+(7, 'davidson', '$2y$10$omCqFOH9LsjRXagVFsyF6.UG3fAFIJzsiWh9WugFp8ikh7QoIIqSW', 1, 69, 'davidson', 'davidson@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `url` varchar(50) NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `videos`
+--
+
+INSERT INTO `videos` (`id`, `title`, `url`, `text`) VALUES
+(2, 'asdass', '7fNAVW4Otks', 'asdasd');
 
 --
 -- Indexes for dumped tables
@@ -3287,6 +3699,12 @@ ALTER TABLE `albums`
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3338,6 +3756,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `videos`
+--
+ALTER TABLE `videos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -3345,7 +3769,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accesses`
 --
 ALTER TABLE `accesses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2973;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3326;
 --
 -- AUTO_INCREMENT for table `ads`
 --
@@ -3367,6 +3791,11 @@ ALTER TABLE `albums`
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `focuses`
 --
 ALTER TABLE `focuses`
@@ -3375,12 +3804,12 @@ ALTER TABLE `focuses`
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `galleries_images`
 --
 ALTER TABLE `galleries_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `groups`
 --
@@ -3390,12 +3819,12 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `songs`
 --
@@ -3405,7 +3834,12 @@ ALTER TABLE `songs`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

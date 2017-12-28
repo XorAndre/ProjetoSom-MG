@@ -91,7 +91,7 @@ class UsersController extends AppController
                 } else
                     $this->Flash->error(__('The user could not be saved. Please, try again.'));
             }else
-            $this->Flash->error(__('Não foi possivel salvar a imagem.'));
+            $this->Flash->error(__('Não foi possivel salvar a imagem. A imagem é válida? A imagem é pelo menos 200x200?'));
         } 
         $this->Users->Images->deleteUnlinkeds();
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);

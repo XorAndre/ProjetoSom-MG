@@ -25,7 +25,7 @@ class GalleriesController extends AppController
     public function index()
     {
         $this->viewBuilder()->setLayout('site');
-        $this->paginate = [];
+        $this->paginate = ['limit' => 9];
         $galleries = $this->paginate($this->Galleries);
         $im = [];
         foreach ($galleries as $key => $value) {
@@ -101,7 +101,7 @@ class GalleriesController extends AppController
                     }
 
                     $this->Flash->success(__('Galeria Criada!.'));
-                    return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['action' => 'adminIndex']);
                 }
             }
             $this->Flash->error(__('A galeria não foi salva, tente novamente.'));
