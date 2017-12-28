@@ -1,12 +1,12 @@
 			<section class="container">
 				<article class="row">
 					<?= $this->element('proximos-eventos') ?>
-					<?= $this->element('publicidade-eventos') ?>
+					<?= $this->element('publicidade-eventos', ['publicidadelateral' => $publicidadelateral]) ?>
 				</article>
 			</section><!--/box-um-->
 			<section class="container">
 				<article class="row">
-					<?= $this->element('publicidade-som') ?>
+					<?= $this->element('publicidade-som', ['publicidadetopo' => $publicidadetopo]) ?>
 					<?= $this->element('arena-som') ?>
 				</article>
 			</section><!--/box-dois-->

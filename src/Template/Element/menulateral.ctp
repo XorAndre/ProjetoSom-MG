@@ -17,7 +17,7 @@
                     <li><?= $this->Html->link("NOTICIAS", ['controller' => 'news','action' => 'add']) ?></li>
                     <li><?= $this->Html->link("GALERIA DE FOTOS", ['controller' => 'galleries','action' => 'add']) ?></li>
                     <li><?= $this->Html->link("DESTAQUES", ['controller' => 'focuses','action' => 'add']) ?></li>
-                    <li><?= $this->Html->link("MÚSICAS", ['controller' => 'albums','action' => 'add']) ?></li>
+                     <li><a href="#">MUSICAS</a></li>
                     <li><?= $this->Html->link("VÍDEOS", ['controller' => 'videos','action' => 'add']) ?></li>
                    
                     <li><a href="#">AGENDA</a></li>
@@ -28,10 +28,10 @@
                 <a href="#"><i class="lnr lnr-list"></i>
                 <span>LISTAGENS</span></a>
                 <ul class="sub-menu-list">
-                    <li><?= $this->Html->link("NOTICIAS", ['controller' => 'news','action' => 'index']) ?></li>
-                    <li><?= $this->Html->link("GALERIA DE FOTOS", ['controller' => 'galleries','action' => 'index']) ?></li>
-                    <li><?= $this->Html->link("DESTAQUES", ['controller' => 'focuses','action' => 'index']) ?></li>
-                    <li><?= $this->Html->link("MUSICAS", ['controller' => 'albums','action' => 'index']) ?></li>
+                    <li><?= $this->Html->link("NOTICIAS", ['controller' => 'news','action' => 'adminIndex']) ?></li>
+                    <li><?= $this->Html->link("GALERIA DE FOTOS", ['controller' => 'galleries','action' => 'adminIndex']) ?></li>
+                    <li><?= $this->Html->link("DESTAQUES", ['controller' => 'focuses','action' => 'adminIndex']) ?></li>
+                    <li><a href="#">MUSICAS</a></li>
                     <li><?= $this->Html->link("VÍDEOS", ['controller' => 'videos','action' => 'index']) ?></li>
                    
                     <li><a href="#">AGENDA</a></li>
@@ -39,8 +39,8 @@
             </li>
             <li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>PUBLICIDADES</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="">TOPO</a></li>
-                    <li><a href="">LATERAL</a></li>
+                    <li><?= $this->Html->link("LISTAR", ['controller' => 'banners','action' => 'index']) ?></li>
+                    <li><?= $this->Html->link("ADICIONAR", ['controller' => 'banners','action' => 'add']) ?></li>
                 </ul>
             </li>
             <li class="menu-list"><a href="#"><i class="lnr lnr-user"></i> <span>USUÁRIOS</span></a>

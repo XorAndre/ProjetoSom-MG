@@ -101,6 +101,19 @@ class PagesController extends AppController
             $resultadoFocuses[$key]['Image'] = $focuses->Images->preparePath($value['image_id']);
         }
 
-        $this->set('resultadoFocuses',$resultadoFocuses);
+        $this->set('resultadoFocuses', $resultadoFocuses);
+        $places = TableRegistry::get('Places');
+        $queryPlaces = $places->find()
+            ->contain(['Banners']);
+        $queryPlaces = $queryPlaces->all();
+        foreach ($queryPlaces as $keyPlace => $valuePlace) {
+            $auxarr = [];
+            foreach ($valuePlace['banners'] as $key => $value) {
+                $aux = substr($value['path'], 12);
+                $aux = str_replace('\\', '/', $aux);
+                $auxarr[] = ($aux."thumbnail".$valuePlace['name']."-".$value['name']);
+            }
+            $this->set('publicidade'.$valuePlace['name'], $auxarr);
+        }       
     }
 }

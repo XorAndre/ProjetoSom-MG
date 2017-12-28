@@ -22,7 +22,7 @@ class FocusesController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
+    public function adminIndex()
     {
         $focuses = $this->Focuses->find('all', ['contain' => 'Categories']);
         foreach ($focuses as $key => $value) {
