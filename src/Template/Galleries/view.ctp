@@ -1,38 +1,13 @@
-
-<div class="galleries view large-9 medium-8 columns content">
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($gallery->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Image Id') ?></th>
-            <td><?= $this->Number->format($gallery->image_id) ?></td>
-        </tr>
-    </table>
-    <div class="related">
-        <h4><?= __('Related Images') ?></h4>
-        <?php if (!empty($gallery->images)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Path') ?></th>
-                <th scope="col"><?= __('Name') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($gallery->images as $images): ?>
-            <tr>
-                <td><?= h($images->id) ?></td>
-                <td><?= h($images->path) ?></td>
-                <td><?= h($images->name) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Images', 'action' => 'view', $images->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Images', 'action' => 'edit', $images->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Images', 'action' => 'delete', $images->id], ['confirm' => __('Are you sure you want to delete # {0}?', $images->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-</div>
+<section class="container">
+    <article class="row">
+        <div class="col-md-12">
+            <?= $this->Html->image($gallery['capa']['path'] . '/' . $gallery['capa']['name'], ['alt' => $gallery->text, 'class' => 'img-responsive'])  ?>
+            <h2><?= h($gallery->title) ?></h2>
+            <p><?= $this->Text->autoParagraph(h($gallery->text)); ?></p>
+            <h1>Outras imagens</h1>
+            <?php foreach ($gallery['outrasimagens'] as $key => $value): ?>
+                <?= $this->Html->image($value['path'] . '/' . $value['name'], ['alt' => $gallery->text, 'class' => 'img-responsive'])  ?>
+            <?php endforeach ?>
+        </div>
+    </article>
+</section>

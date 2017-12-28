@@ -58,9 +58,14 @@ class GalleriesController extends AppController
     public function view($id = null)
     {
         $this->viewBuilder()->setLayout('site');
-        $gallery = $this->Galleries->get($id, [
-            'contain' => ['Images']
-        ]);
+        $gallery = $this->Galleries->get($id);
+        $gallery['capa'] = $this->Galleries->Images->preparePath($gallery['image_id']);
+        
+        $outrasimagens = $this->Galleries->GalleriesImages->find('all')->where(['gallery_id' => $id]);
+        $gallery['outrasimagens'] = [];
+        foreach ($outrasimagens as $key => $value) {
+            $gallery['outrasimagens'][] = $this->Galleries->Images->preparePath($value['image_id']);
+        }
 
         $this->set('gallery', $gallery);
         $this->set('_serialize', ['gallery']);

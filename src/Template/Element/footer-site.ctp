@@ -11,9 +11,9 @@
 				      <div class="col-md-4 col-sm-4 col-xs-12 paddingtop-bottom">
 				        <h6 class="heading7">CATEGORIAS</h6>
 				        <ul class="footer-ul">
-				          <li><a href="#"> COBERTURAS</a></li>
+				          <li><?= $this->Html->link('COBERTURAS', ['controller' => 'galleries', 'action' => 'index']) ?></li>
 				          <li><a href="#"> MÚSICAS</a></li>
-				          <li><a href="#"> NOTÍCIAS</a></li>
+				          <li><?= $this->Html->link('NOTÍCIAS', ['controller' => 'news', 'action' => 'index']) ?></li>
 				          <li><a href="#"> RANKING</a></li>          
 				          <li><a href="#"> DÚVIDAS FREQUENTES</a></li>         
 				        </ul>
