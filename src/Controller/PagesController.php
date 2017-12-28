@@ -42,7 +42,7 @@ class PagesController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['home']);
+        $this->Auth->allow(['home', 'construcao']);
     }
 
     public function adminHome(){
@@ -51,15 +51,19 @@ class PagesController extends AppController
         ->select(['data'])
         ->group(['DATE_FORMAT(data, "%Y-%m-%d")']);
         $query->select(['count' => $query->func()->count('*')]);
-        $query->select(['DATE_FORMAT' => $query->func()->count('*')]);
         $results = $query->all();
         foreach ($results as $key => $value) {
+            if(!empty($value->data))
             $json[] = ["#!!Date.UTC(".date_format($value->data, 'Y').",".date_format($value->data, 'm').",".date_format($value->data, 'd'). ")!!#",$value->count];
         }
         $string = json_encode($json);
         $string = str_replace('"#!!','',$string);
         $string = str_replace('!!#"','',$string);
         $this->set("data", $string);
+    }
+
+    public function construcao(){
+        $this->viewBuilder()->setLayout(false);
     }
 
     public function home()
