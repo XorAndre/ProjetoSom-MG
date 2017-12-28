@@ -16,12 +16,12 @@
 			            </li>
 			            <li><a href="#">ARENA SOM-MG</a></li>
 			            <li><a href="#">AGENDA</a></li>
-			            <li><a href="?pagina=galeria">COBERTURAS</a></li>
+			            <li><?= $this->Html->link('COBERTURAS', ['controller' => 'galleries', 'action' => 'index']) ?></li>
 			            <li><a href="#">MÚSICAS</a></li>
 			            <li><a href="#">VÍDEOS</a></li>
 			            <li><a href="#">MATÉRIAS</a></li>
 			            <li><a href="#">RANKING</a></li>
-			            <li><a href="#">CONTATO</a></li>
+			            <li><?= $this->Html->link('CONTATO', ['controller' => 'contacts', 'action' => 'add']) ?></li>
 			            <li><a href="?pagina=nossa-historia">CONHEÇA NOSSA HISTÓRIA</a></li>
 			        </ul>                   
 			        </div><!--/.nav-collapse -->

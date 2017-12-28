@@ -15,7 +15,7 @@ class GalleriesController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['view']);
+        $this->Auth->allow(['view', 'index']);
     }
     /**
      * Index method
@@ -23,6 +23,20 @@ class GalleriesController extends AppController
      * @return \Cake\Http\Response|void
      */
     public function index()
+    {
+        $this->viewBuilder()->setLayout('site');
+        $this->paginate = [];
+        $galleries = $this->paginate($this->Galleries);
+        $im = [];
+        foreach ($galleries as $key => $value) {
+            $im[] = $this->Galleries->Images->preparePath($value['image_id']);         
+        }
+        $this->set(compact('galleries'));
+        $this->set(compact('im'));
+        $this->set('_serialize', ['galleries']);
+    }
+
+    public function adminIndex()
     {
         $galleries = $this->Galleries->find('all');
         foreach ($galleries as $key => $value) {
@@ -43,7 +57,7 @@ class GalleriesController extends AppController
      */
     public function view($id = null)
     {
-                $this->viewBuilder()->setLayout('site');
+        $this->viewBuilder()->setLayout('site');
         $gallery = $this->Galleries->get($id, [
             'contain' => ['Images']
         ]);

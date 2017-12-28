@@ -1,39 +1,19 @@
-<div id="page-wrapper">
-    <div class="graphs">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="container demo">
-                      <table class="datatable table table-striped table-bordered">
-                        <thead>
-                          <tr>
-                            <th>Título</th>
-                            <th>Data</th>
-                            <th>Descrição</th>
-                            <th>Foto</th>
-                            <th>Ações</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <?php $i = 0 ?>
-                        <?php foreach ($galleries as $gallery): ?>
-                          <tr class="gradeX">
-                            <td><?= $gallery->title ?></td>
-                            <td><?= $gallery->data ?></td>
-                            <td><?= $gallery->text ?></td>
-                            <td class="center"><?= $this->Html->image($im[$i]['path'] . '/thumbnail-' . $im[$i++]['name']) ?></td>
-                                <td class="center">
-                                    <?= $this->Html->link(__('View'), ['action' => 'view', $gallery->id],['class' => 'btn btn-success',]) ?>
-                                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $gallery->id],['class' => 'btn btn-info']) ?>
-                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $gallery->id], ['class' => 'btn btn-danger','confirm' => __('Tem certeza que deseja deletar {0}?', $gallery->title)]) ?>
-                                </td>
-                          </tr>    
-                        <?php endforeach; ?>                     
-                        </tbody>                        
-                      </table>
-                    </div><!--/.container.demo -->
-                </div>                
-            </div>
-        </div><!--/container-->
-    </div>
+			<section class="container">
+				<article class="row">
+<?php if (!empty($galleries)): ?>
+<div class="col-md-12">
+	<?php foreach ($galleries as $key => $value): ?>
+	<figure class="snip1585">
+		<?= $this->Html->image($im[$key]['path']. '/thumbnail-'. $im[$key]['name'], ['alt' => $value['title']]) ?>
+		<figcaption>
+			<h3><?= $value['title'] ?> <span><?= $value['text'] ?></span></h3>
+		</figcaption>
+		<?= $this->Html->link('',['controller' => 'Galleries', 'action' => 'view', $value['id']]) ?>
+	</figure><!--/fim-view-box-->
+	<?php endforeach ?>
 </div>
+<?php else: ?>
+	Nao temos ultimas galerias
+<?php endif ?>
+</article>
+</section>
